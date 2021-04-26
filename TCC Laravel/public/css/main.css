@@ -1,0 +1,94 @@
+body{
+    /*definições do body*/
+    background-color: #282830;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.cabecalho {
+    /*definindo o primeiro cabeçalho*/
+    width: 100%;
+    height: 148px;
+}
+main, .content{
+    /*definindo o formato do primeiro cabeçalho e do site*/
+    margin: 0 auto;
+    width: 1128px;
+    position: relative;
+}
+.logo-1{
+    /*posicionando o macaco*/
+    float:left;
+    padding:14px;
+}
+.logo-2{
+    /*posicionando o nome do site*/
+    float:left;
+    margin-top: 35px;
+}
+.cadastro{
+    /*posicionando o cadastro*/
+    float: right;
+    width:30%;
+}
+.cadastro ul li{
+    /*"estilizando o cadastro"*/
+    display: inline-block;
+    margin-top: 50px;
+}
+.col-100{
+    /*ocupando a tela inteira*/
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.menu-urls{
+    /*altura e cor do segundo cabeçalho*/
+    height: 55px; 
+    background-color: #14141c;
+}
+
+.menu{
+    /*posicionando o segundo cabeçalho*/
+    margin-left: 150px;
+    width:40%;
+    position: relative;
+    margin-top: -10px;
+    float: left;
+    
+}
+.menu ul li{
+    /*posicionando os links*/
+    display: inline-block;
+    padding: 12px;
+}
+.menu ul li a{
+    /*estilizando os links*/
+    color: #3dadcf;
+    font-size: 18px;
+    text-decoration: none;
+}
+.busca{
+    /*posicionando a ferramenta de busca*/
+    width:40%;
+    float:right;
+    padding-top: 15px;
+    
+}
+.busca input{
+    /*estilizando a ferramenta de busca*/
+    text-align: center;
+    background-color: #282830;
+    background-image: url('../img/busca.png') ;
+    background-repeat: no-repeat;
+    background-position: 95%;
+    width:301px;
+    height:29px;
+    font-size: 18px;
+}
+.donate{
+    float:right;
+    width:10%;
+    margin-top: -37px;
+    
+}
