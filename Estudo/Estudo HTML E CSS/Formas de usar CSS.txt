@@ -1,7 +1,0 @@
-3 Formas De utilizar o CSS no HTML:
-
-- CSS Inline: Adicionando "style=" na própria linha de código
-
-- CSS Interno: Adicionando uma tag "style" dentro de head e colocando as alterações lá
-
-- CSS Externo: Criando um arquivo chamado "style.css" colocando todo o css nesse arquivo, para o html encontrar esse arquivo é necessário escrever <link rel="stylesheet" href="arquivo.css"/>
