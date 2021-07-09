@@ -1,17 +1,23 @@
-@extends('layouts.tutoriaismain')
+@extends('layouts.perfilmain')
 
-@section('title', 'Tutorias')
+@section('title', 'Perfil')
 
 @section('content')
 
-    <h1> Página de Tutoriais </h1>
+    <div id="perfil">
+        <header class="cabeça">
+        <div class ="nomep"> Nome do perfil
+        <div class="foto"> Aqui é onde fica a foto do perfil </div>
+    </div>
+    <div class="capa"> <div>
+ 
 
 
-    
+    </div>
+    <br>
+    <br>
 
-
-
-
+    <button> Salvar </button>
 
     <!-- Rodapé
         <section class="footer">
@@ -28,5 +34,7 @@
             </div>
             </li>
         </section> -->
+
+
 
 @endsection

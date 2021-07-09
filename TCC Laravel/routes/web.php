@@ -21,10 +21,6 @@ Route::get('/noticias', function() {
     return view('noticias');
 });
 
-Route::get('/notícias', function() {
-    return view('noticias');
-});
-
 Route::get('/reviews', function() {
     return view('reviews');
 });
@@ -33,10 +29,16 @@ Route::get('/forum', function() {
     return view('forum');
 });
 
-Route::get('/fórum', function() {
-    return view('forum');
-});
-
 Route::get('/tutoriais', function() {
     return view('tutoriais');
 });
+
+Route::get('/sobre', function() {
+    return view('sobre');
+});
+
+Route::get('/perfil', [App\Http\Controllers\Perfil::class, 'index'])->name('perfil');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

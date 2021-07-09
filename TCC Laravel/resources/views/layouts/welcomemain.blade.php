@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link href="/public/css/main.css" rel="stylesheet">
     <title>@yield('title')</title>
 </head>
@@ -14,7 +14,5 @@
   @yield('content')
 
 </body>
-
-<footer> Digital Monkey &copy; 2021 </footer>
 
 </html>

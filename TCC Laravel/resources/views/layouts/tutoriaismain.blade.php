@@ -13,6 +13,4 @@
 
 </body>
 
-<footer> Digital Monkey &copy; 2021 </footer>
-
 </html>

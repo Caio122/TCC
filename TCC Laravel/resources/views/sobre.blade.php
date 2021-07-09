@@ -1,13 +1,10 @@
-@extends('layouts.tutoriaismain')
+@extends('layouts.sobremain')
 
-@section('title', 'Tutorias')
+@section('title', 'Sobre')
 
 @section('content')
 
-    <h1> Página de Tutoriais </h1>
-
-
-    
+    <h1> Página explicativa do site </h1>
 
 
 
