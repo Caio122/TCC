@@ -7,8 +7,8 @@
   <!-- Cabeçalho com logo e login -->
   <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./img/logo.png" />
+            <a class="navbar-brand" href="/">
+                <img src="./img/logo.png"/>
             </a>
             @auth
                 <div class="navbar-brand ml-auto">
@@ -36,8 +36,8 @@
         @endguest
         </div>
     </nav>
-    <!-- Barra com as categorias, pesquisa e donate -->
 
+    <!-- Barra com as categorias, pesquisa e donate -->
     <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
         <a class="navbar-brand ml-auto" href="">
             <img src="./img/donate.png" />
@@ -60,10 +60,10 @@
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
-            <input class="form-control form-control-sm bg-dark" type="search">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark" type="search">
         </form>
-
     </nav>
+
     <!-- Começo das notícias -->
     <div class="container-fluid mt-5">
         <div class="row">

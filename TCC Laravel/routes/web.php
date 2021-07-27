@@ -42,3 +42,7 @@ Route::get('/perfil', [App\Http\Controllers\Perfil::class, 'index'])->name('perf
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/primeira', function() {
+    return view('primeira');
+});
