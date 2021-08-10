@@ -40,7 +40,7 @@
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
-            <input class="form-control form-control-sm bg-dark" type="search">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark" type="search">
         </form>
     </nav>
 
@@ -57,22 +57,62 @@
                 </a>
         <br/>
  </div>
+ <br/>
 
-    <!-- Rodapé
+    <a href="/primeira">
+            <div style=" display: table;"class="conteudo">
+                    <div style="display: table-cell;float: left;" class="imagem">
+                        <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
+                    </div>
+                        <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                            <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC</h2>
+                        </div>
+                    </a>
+            <br/>
+    </div>
+    <br/>
+
+    <a href="/primeira">
+            <div style=" display: table;"class="conteudo">
+                    <div style="display: table-cell;float: left;" class="imagem">
+                        <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
+                    </div>
+                        <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                            <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC</h2>
+                        </div>
+                    </a>
+            <br/>
+    </div>
+    <br/>
+
+    <a href="/primeira">
+            <div style=" display: table;"class="conteudo">
+                    <div style="display: table-cell;float: left;" class="imagem">
+                        <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
+                    </div>
+                        <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                            <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC</h2>
+                        </div>
+                    </a>
+            <br/>
+    </div>
+    <br/>
+
     <section class="footer">
-        <div class="container mt-2">
+        <div class="container mt-2">            
             <ul>
                 <li class="grid-8">
                     <p class="text-info">
                         <img src="./img/logo-ape.png" width="30" height="35" alig="left">
                         2021-2021 Digital Monkey |
-                        Todas as imagens de filmes, séries e outros produtos mencionados são marcas registradas dos seus respectivos
+                        Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
                         proprietários.
                     </p>
-            </ul>
+                </ul>
+            </div> 
         </div>
     </li>
-</section> -->
+</section>
 
 
 @endsection

@@ -41,7 +41,7 @@
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
-            <input class="form-control form-control-sm bg-dark" type="search">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark" type="search">
         </form>
     </nav>
 
@@ -49,8 +49,8 @@
     <div class="container text-justify" style="font-size: 22px">
         <div class="row">
             <!-- Título do Texto -->
-            <div class="content text-left my-5">
-                <h1 class="title text-info">Título Da Notícia</h2>
+            <div class="content text-center my-5">
+                <h1 class="title text-info">Título Da Notícia</h1>
                 <!-- Subtítulo -->
                 <p class="text-white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget fringilla nulla, sed tempus

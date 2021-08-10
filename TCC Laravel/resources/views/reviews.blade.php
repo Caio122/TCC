@@ -16,8 +16,8 @@
             </div>
         </div>
     </nav>
-    <!-- Barra com as categorias, pesquisa e donate -->
 
+    <!-- Barra com as categorias, pesquisa e donate -->
     <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
         <a class="navbar-brand ml-auto" href="">
             <img src="./img/donate.png" />
@@ -40,31 +40,78 @@
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
-            <input class="form-control form-control-sm bg-dark" type="search">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark" type="search">
         </form>
     </nav>
 
-    <h1 class="title text-info"> Página de Reviews </h1>
+    <!-- Parte De Reviews -->
+    <h1 class="title text-info"> Últimas Reviews </h1>
+        <a href="/primeira">
+         <div style=" display: table;"class="conteudo">
+                <div style="display: table-cell;float: left;" class="imagem">
+                    <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                </div>
+                    <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                        <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                    </div>
+                </a>
+        <br/>
+ </div>
+ <br/>
 
+    <a href="/primeira">
+            <div style=" display: table;"class="conteudo">
+                    <div style="display: table-cell;float: left;" class="imagem">
+                        <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                    </div>
+                        <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                            <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                        </div>
+                    </a>
+            <br/>
+    </div>
+<br/>
 
+    <a href="/primeira">
+                <div style=" display: table;"class="conteudo">
+                        <div style="display: table-cell;float: left;" class="imagem">
+                            <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                        </div>
+                            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                            </div>
+                        </a>
+                <br/>
+        </div>
+    <br/>
 
+    <a href="/primeira">
+                <div style=" display: table;"class="conteudo">
+                        <div style="display: table-cell;float: left;" class="imagem">
+                            <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                        </div>
+                            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
+                                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                            </div>
+                        </a>
+                <br/>
+        </div>
+    <br/>
 
-
-    <!-- Rodapé
-        <section class="footer">
-            <div class="container mt-2">
-                <ul>
-                    <li class="grid-8">
-                        <p class="text-info">
-                            <img src="./img/logo-ape.png" width="30" height="35" alig="left">
-                            2021-2021 Digital Monkey |
-                            Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
-                            proprietários
-                        </p>
-                </ul>
-            </div>
-            </li>
-        </section> -->
+    <section class="footer">
+        <div class="container mt-2">
+            <ul>
+                <li class="grid-8">
+                    <p class="text-info">
+                        <img src="./img/logo-ape.png" width="30" height="35" alig="left">
+                        2021-2021 Digital Monkey |
+                        Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
+                        proprietários.
+                    </p>
+                </ul> 
+        </div>
+    </li>
+</section>
 
 
 @endsection

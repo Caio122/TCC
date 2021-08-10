@@ -26,7 +26,7 @@
         @endauth
         @guest
             <div class="navbar-brand ml-auto">
-                <a href ="/register">
+            <a href ="/register">
                 <button type="button" class="btn btn-info">Registre-se</button>
             </a>
             <a href ="/login">
@@ -200,7 +200,7 @@
                         <img src="./img/logo-ape.png" width="30" height="35" alig="left">
                         2021-2021 Digital Monkey |
                         Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
-                        proprietários
+                        proprietários.
                     </p>
             </ul>
         </div>

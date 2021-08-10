@@ -40,7 +40,7 @@
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
-            <input class="form-control form-control-sm bg-dark" type="search">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark" type="search">
         </form>
     </nav>
 
