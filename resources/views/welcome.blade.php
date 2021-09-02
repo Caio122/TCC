@@ -4,36 +4,34 @@
 
 @section('content')
 
-  <!-- Cabeçalho com logo e login -->
-  <nav class="navbar navbar-expand-lg navbar-fixed-top">
+    <!-- Cabeçalho com logo e login -->
+    <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="./img/logo.png"/>
+                <img src="./img/logo.png" />
             </a>
             @auth
                 <div class="navbar-brand ml-auto">
-                <form action ="/logout" method="POST">
-            @csrf
-             <a href="/logout"
-                class="btn btn-info" 
-                onclick="event.preventDefault();
-                this.closest('form').submit();">
-                 Sair
-                </a>
-            </form>
-            </a>
-            </div>
-        @endauth
-        @guest
-            <div class="navbar-brand ml-auto">
-            <a href ="/register">
-                <button type="button" class="btn btn-info">Registre-se</button>
-            </a>
-            <a href ="/login">
-                <button type="button" class="btn btn-light">Login</button>
-            </a>
-            </div>
-        @endguest
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <a href="/logout" class="btn btn-info" onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                            Sair
+                        </a>
+                    </form>
+                    </a>
+                </div>
+            @endauth
+            @guest
+                <div class="navbar-brand ml-auto">
+                    <a href="/register">
+                        <button type="button" class="btn btn-info">Registre-se</button>
+                    </a>
+                    <a href="/login">
+                        <button type="button" class="btn btn-light">Login</button>
+                    </a>
+                </div>
+            @endguest
         </div>
     </nav>
 
@@ -60,7 +58,8 @@
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
-            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark" type="search">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark"
+                type="search">
         </form>
     </nav>
 
@@ -205,15 +204,15 @@
                         Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
                         proprietários
                     </p>
-                </ul>
-            </div>
-       </li>
-</section>
+            </ul>
+        </div>
+        </li>
+    </section>
 
 
 
 
-    
+
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
