@@ -9,7 +9,7 @@
         <!-- Cabeçalho com logo e login -->
         <nav class="navbar navbar-expand-lg navbar-fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="{{url('/')}}">
                     <img src="./img/logo.png" />
                 </a>
                 @auth

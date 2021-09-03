@@ -7,36 +7,54 @@
 <!-- Cabeçalho com logo e login -->
 <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="{{url('/')}}">
                 <img src="./img/logo.png" />
             </a>
-            <div class="navbar-brand ml-auto">
-                <button type="button" class="btn btn-info">Registre-se</button>
-                <button type="button" class="btn btn-light">Login</button>
-            </div>
+            @auth
+                <div class="navbar-brand ml-auto">
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <a href="/logout" class="btn btn-info" onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                            Sair
+                        </a>
+                    </form>
+                    </a>
+                </div>
+            @endauth
+            @guest
+                <div class="navbar-brand ml-auto">
+                    <a href="{{route('register')}}">
+                        <button type="button" class="btn btn-info">Registre-se</button>
+                    </a>
+                    <a href="{{route('login')}}">
+                        <button type="button" class="btn btn-light">Login</button>
+                    </a>
+                </div>
+            @endguest
         </div>
     </nav>
-    <!-- Barra com as categorias, pesquisa e donate -->
 
+    <!-- Barra com as categorias, pesquisa e donate -->
     <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
         <a class="navbar-brand ml-auto" href="">
             <img src="./img/donate.png" />
         </a>
         <ul class="navbar-nav mr-auto px-5">
             <li class="nav-item">
-                <a class="nav-link text-info" href="/noticias">Notícias</a>
+                <a class="nav-link text-info" href="{{route('noticias')}}">Notícias</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/forum">Fórum</a>
+                <a class="nav-link text-info" href="{{route('forum')}}">Fórum</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/reviews">Reviews</a>
+                <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/tutoriais">Tutoriais</a>
+                <a class="nav-link text-info" href="{{route('tutoriais')}}">Tutoriais</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/sobre">Sobre</a>
+                <a class="nav-link text-info" href="{{url('noticias')}}">Sobre</a>
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">

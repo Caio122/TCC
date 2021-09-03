@@ -1,6 +1,6 @@
-@extends('layouts.reviewsmain')
+@extends('layouts.noticiasmain')
 
-@section('title', 'Reviews')
+@section('title', 'Notícias')
 
 @section('content')
 
@@ -8,7 +8,7 @@
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{url('/')}}">
-                <img src="./img/logo.png" />
+                <img src="./img/logo.png"/>
             </a>
             @auth
                 <div class="navbar-brand ml-auto">
@@ -63,18 +63,16 @@
         </form>
     </nav>
 
-
-    <!-- Parte Da Inserção de Novas Reviews -->
-
-    <!-- Parte De Reviews -->
-    <h1 class="title text-info"> Últimas Reviews </h1>
+    <!-- Parte De Notícias -->
+    <h1 class="title text-info"> Últimas Notícias </h1>
     <a href="/primeira">
         <div style=" display: table;" class="conteudo">
             <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
             </div>
             <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                    </h2>
             </div>
     </a>
     <br />
@@ -84,10 +82,11 @@
     <a href="/primeira">
         <div style=" display: table;" class="conteudo">
             <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
             </div>
             <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                    </h2>
             </div>
     </a>
     <br />
@@ -97,10 +96,11 @@
     <a href="/primeira">
         <div style=" display: table;" class="conteudo">
             <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
             </div>
             <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                    </h2>
             </div>
     </a>
     <br />
@@ -110,10 +110,11 @@
     <a href="/primeira">
         <div style=" display: table;" class="conteudo">
             <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
+                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
             </div>
             <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
+                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                    </h2>
             </div>
     </a>
     <br />

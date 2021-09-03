@@ -24,8 +24,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/noticias', function() {
-    return view('noticias');
+
+Route::prefix('/noticias')->group( function(){
+
+    Route::get('/', [Noticias::class, 'index'])->name('noticias');
+
+    Route::get('/create', [Noticias::class, 'create'])->name('noticias.create');
+
+    Route::post('/create/store', [Noticias::class, 'store'])->name('noticias.store');
+
+    Route::get('/show/{id}', [Noticias::class, 'show'])->name('noticias.show');
+
+    Route::get('/edit/{id}', [Noticias::class, 'edit'])->name('noticias.edit');
+
+    Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('noticias.update');
+
+
 });
 
 Route::prefix('/forum')->group( function(){
@@ -42,22 +56,22 @@ Route::prefix('/forum')->group( function(){
 
     Route::put('/edit/update/{id}', [Forum::class, 'update'])->name('forum.update');
 
-
+    
 });
 
 Route::prefix('/reviews')->group( function(){
 
     Route::get('/', [Reviews::class, 'index'])->name('reviews');
 
-    Route::get('/create', [Reviews::class, 'create'])->name('Reviews.create');
+    Route::get('/create', [Reviews::class, 'create'])->name('reviews.create');
 
-    Route::post('/create/store', [Reviews::class, 'store'])->name('Reviews.store');
+    Route::post('/create/store', [Reviews::class, 'store'])->name('reviews.store');
 
-    Route::get('/show/{id}', [Reviews::class, 'show'])->name('Reviews.show');
+    Route::get('/show/{id}', [Reviews::class, 'show'])->name('reviews.show');
 
-    Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('Reviews.edit');
+    Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('reviews.edit');
 
-    Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('Reviews.update');
+    Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('reviews.update');
 
 
 });

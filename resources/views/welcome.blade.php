@@ -7,7 +7,7 @@
     <!-- Cabeçalho com logo e login -->
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="{{url('/')}}">
                 <img src="./img/logo.png" />
             </a>
             @auth
@@ -24,10 +24,10 @@
             @endauth
             @guest
                 <div class="navbar-brand ml-auto">
-                    <a href="/register">
+                    <a href="{{route('register')}}">
                         <button type="button" class="btn btn-info">Registre-se</button>
                     </a>
-                    <a href="/login">
+                    <a href="{{route('login')}}">
                         <button type="button" class="btn btn-light">Login</button>
                     </a>
                 </div>
@@ -42,19 +42,19 @@
         </a>
         <ul class="navbar-nav mr-auto px-5">
             <li class="nav-item">
-                <a class="nav-link text-info" href="/noticias">Notícias</a>
+                <a class="nav-link text-info" href="{{route('noticias')}}">Notícias</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/forum">Fórum</a>
+                <a class="nav-link text-info" href="{{route('forum')}}">Fórum</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/reviews">Reviews</a>
+                <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/tutoriais">Tutoriais</a>
+                <a class="nav-link text-info" href="{{route('tutoriais')}}">Tutoriais</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="/sobre">Sobre</a>
+                <a class="nav-link text-info" href="{{url('sobre')}}">Sobre</a>
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
