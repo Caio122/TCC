@@ -42,7 +42,7 @@
         </a>
         <ul class="navbar-nav mr-auto px-5">
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('noticias')}}">Notícias</a>
+                <a class="nav-link text-info" href="{{route('noticias.index')}}">Notícias</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-info" href="{{route('forum')}}">Fórum</a>

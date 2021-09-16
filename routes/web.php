@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 Route::prefix('/noticias')->group( function(){
 
-    Route::get('/', [Noticias::class, 'index'])->name('noticias');
+    Route::get('/', [Noticias::class, 'index'])->name('noticias.index');
 
     Route::get('/create', [Noticias::class, 'create'])->name('noticias.create');
 
@@ -39,6 +39,7 @@ Route::prefix('/noticias')->group( function(){
 
     Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('noticias.update');
 
+    Route::get('/noticias/delete/{noticia}', [Noticias::class, 'destroy'])->name('noticias.delete');
 
 });
 
@@ -56,7 +57,9 @@ Route::prefix('/forum')->group( function(){
 
     Route::put('/edit/update/{id}', [Forum::class, 'update'])->name('forum.update');
 
-    
+    Route::delete('/forum/delete/{noticia}', [Forum::class, 'destroy'])->name('forum.delete');
+
+
 });
 
 Route::prefix('/reviews')->group( function(){
@@ -72,6 +75,8 @@ Route::prefix('/reviews')->group( function(){
     Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('reviews.edit');
 
     Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('reviews.update');
+
+    Route::delete('/reviews/delete/{noticia}', [Reviews::class, 'destroy'])->name('reviews.delete');
 
 
 });
@@ -89,6 +94,8 @@ Route::prefix('/tutoriais')->group( function(){
     Route::get('/edit/{id}', [Tutoriais::class, 'edit'])->name('tutoriais.edit');
 
     Route::put('/edit/update/{id}', [Tutoriais::class, 'update'])->name('tutoriais.update');
+
+    Route::delete('/tutoriais/delete/{noticia}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete');
 
 });
 

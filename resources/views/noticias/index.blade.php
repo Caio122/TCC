@@ -7,15 +7,15 @@
     <!-- Cabeçalho com logo e login -->
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}">
-                <img src="./img/logo.png"/>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="./img/logo.png" />
             </a>
             @auth
                 <div class="navbar-brand ml-auto">
                     <form action="/logout" method="POST">
                         @csrf
                         <a href="/logout" class="btn btn-info" onclick="event.preventDefault();
-                                    this.closest('form').submit();">
+                                            this.closest('form').submit();">
                             Sair
                         </a>
                     </form>
@@ -24,10 +24,10 @@
             @endauth
             @guest
                 <div class="navbar-brand ml-auto">
-                    <a href="{{route('register')}}">
+                    <a href="{{ route('register') }}">
                         <button type="button" class="btn btn-info">Registre-se</button>
                     </a>
-                    <a href="{{route('login')}}">
+                    <a href="{{ route('login') }}">
                         <button type="button" class="btn btn-light">Login</button>
                     </a>
                 </div>
@@ -42,19 +42,19 @@
         </a>
         <ul class="navbar-nav mr-auto px-5">
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('noticias')}}">Notícias</a>
+                <a class="nav-link text-info" href="{{ route('noticias.index') }}">Notícias</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('forum')}}">Fórum</a>
+                <a class="nav-link text-info" href="{{ route('forum') }}">Fórum</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
+                <a class="nav-link text-info" href="{{ route('reviews') }}">Reviews</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('tutoriais')}}">Tutoriais</a>
+                <a class="nav-link text-info" href="{{ route('tutoriais') }}">Tutoriais</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{url('sobre')}}">Sobre</a>
+                <a class="nav-link text-info" href="{{ url('sobre') }}">Sobre</a>
             </li>
         </ul>
         <form class="form-inline my-auto mr-auto px-5">
@@ -62,6 +62,27 @@
                 type="search">
         </form>
     </nav>
+
+    <!-- Parte Do CRUD De Notícias -->
+    <h2 style="color: white;">Notícias</h2>
+    <a style="color: white;" href ="{{ route('noticias.create') }}">Nova Notícia</a>
+    <br><br>
+    <table>
+        @foreach ($noticia as $noticias)
+            <tr>
+                <th scope="row">{{ $noticias->id }}</th>
+                <td> {{ $noticias->nome }}</td>
+                <td> {{ $noticias->quantidade }}</td>
+                <td>
+                    <a href="{{ route('noticias.show', $noticias->id) }}">Detalhes</a>
+                    <a href="{{ route('noticias.edit', $noticias->id) }}">Alterar</a>
+                    <a href="{{ route('noticias.delete', $noticias->id) }}">Deletar</a>
+                </td>
+            </tr>
+        @endforeach
+    </table>
+
+
 
     <!-- Parte De Notícias -->
     <h1 class="title text-info"> Últimas Notícias </h1>
