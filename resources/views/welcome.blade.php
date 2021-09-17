@@ -1,39 +1,9 @@
 @extends('layouts.welcomemain')
-
+@extends('layouts.app')
 @section('title', 'Digital Monkey')
 
 @section('content')
 
-    <!-- Cabeçalho com logo e login -->
-    <nav class="navbar navbar-expand-lg navbar-fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}">
-                <img src="./img/logo.png" />
-            </a>
-            @auth
-                <div class="navbar-brand ml-auto">
-                    <form action="/logout" method="POST">
-                        @csrf
-                        <a href="/logout" class="btn btn-info" onclick="event.preventDefault();
-                        this.closest('form').submit();">
-                            Sair
-                        </a>
-                    </form>
-                    </a>
-                </div>
-            @endauth
-            @guest
-                <div class="navbar-brand ml-auto">
-                    <a href="{{route('register')}}">
-                        <button type="button" class="btn btn-info">Registre-se</button>
-                    </a>
-                    <a href="{{route('login')}}">
-                        <button type="button" class="btn btn-light">Login</button>
-                    </a>
-                </div>
-            @endguest
-        </div>
-    </nav>
 
     <!-- Barra com as categorias, pesquisa e donate -->
     <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
