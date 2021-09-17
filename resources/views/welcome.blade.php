@@ -1,4 +1,5 @@
 @extends('layouts.welcomemain')
+<!--Extends do cabeçalho e roda-pé -->
 @extends('layouts.app')
 @section('title', 'Digital Monkey')
 
