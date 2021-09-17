@@ -83,7 +83,7 @@ Route::prefix('/reviews')->group( function(){
 
 Route::prefix('/tutoriais')->group( function(){
 
-    Route::get('/', [Tutoriais::class, 'index'])->name('tutoriais');
+    Route::get('/', [Tutoriais::class, 'index'])->name('tutoriais.index');
 
     Route::get('/create', [Tutoriais::class, 'create'])->name('tutoriais.create');
 
@@ -95,7 +95,7 @@ Route::prefix('/tutoriais')->group( function(){
 
     Route::put('/edit/update/{id}', [Tutoriais::class, 'update'])->name('tutoriais.update');
 
-    Route::delete('/tutoriais/delete/{noticia}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete');
+    Route::get('/tutoriais/delete/{noticia}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete');
 
 });
 

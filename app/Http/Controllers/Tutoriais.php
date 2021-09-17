@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tutorial;
 
 class Tutoriais extends Controller
 {
@@ -13,7 +14,8 @@ class Tutoriais extends Controller
      */
     public function index()
     {
-        return view('tutoriais.index');
+        $tutorial = Tutorial::where('status', '=', true)->get();
+        return view('tutoriais.index', compact(['tutorial']));
     }
 
     /**
@@ -23,7 +25,8 @@ class Tutoriais extends Controller
      */
     public function create()
     {
-        //
+        $tutorial = Tutorial::all();
+        return view('tutoriais.create', compact('tutorial'));
     }
 
     /**
@@ -34,7 +37,10 @@ class Tutoriais extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tutorial = new Tutorial();
+        $tutorial->nome = $request->input('nome');
+        $tutorial->save();
+        return redirect()->route('tutoriais.index', compact('tutorial'));
     }
 
     /**
@@ -45,7 +51,8 @@ class Tutoriais extends Controller
      */
     public function show($id)
     {
-        //
+        $tutorial = Tutorial::where('id', $id)->first();
+        return view('tutoriais.show', compact(['tutorial']));
     }
 
     /**
@@ -56,7 +63,11 @@ class Tutoriais extends Controller
      */
     public function edit($id)
     {
-        //
+        $tutorial = Tutorial::find($id);
+        if (isset($tutorial)) {
+            return view('tutoriais.edit', compact('tutorial'));
+        }
+        return view('tutoriais.index');
     }
 
     /**
@@ -68,7 +79,13 @@ class Tutoriais extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tutorial = Tutorial::find($id);
+        if (isset($tutorial)) {
+            $tutorial->nome = $request->input('nome'); 
+            //caso queira adicionar mais variaveis é pra mudar depois do arrow
+            $tutorial->save();
+        }
+        return redirect()->route('tutoriais.index', compact('tutorial'));
     }
 
     /**
@@ -77,8 +94,14 @@ class Tutoriais extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    
+    public function destroy(Request $request, $id) {
+        $tutorial = Tutorial::find($id);
+        if (isset($tutorial)) {
+            $tutorial->status = false;
+            $tutorial->save();
+        }
+        return redirect()->route('tutoriais.index', compact('tutorial'));
     }
 }
+

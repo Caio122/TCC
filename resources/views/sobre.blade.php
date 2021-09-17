@@ -51,7 +51,7 @@
                 <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('tutoriais')}}">Tutoriais</a>
+                <a class="nav-link text-info" href="{{route('tutoriais.index')}}">Tutoriais</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-info" href="{{url('register')}}">Sobre</a>

@@ -51,7 +51,7 @@
                 <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('tutoriais')}}">Tutoriais</a>
+                <a class="nav-link text-info" href="{{route('tutoriais.index')}}">Tutoriais</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-info" href="{{url('sobre')}}">Sobre</a>
@@ -64,6 +64,25 @@
     </nav>
 
     <h1 class="title text-info"> Página de Tutoriais </h1>
+
+    <!-- Parte Do CRUD De Tutoriais -->
+    <h2 style="color: white;">Tutoriais</h2>
+    <a style="color: white;" href ="{{ route('tutoriais.create') }}">Novo Tutorial</a>
+    <br><br>
+    <table>
+      @foreach ($tutorial as $tutoriais)
+         <tr>
+                <th scope="row">{{ $tutoriais->id }}</th>
+                <td> {{ $tutoriais->nome }}</td>
+                <td> {{ $tutoriais->quantidade }}</td>
+                <td>
+                    <a href="{{ route('tutoriais.show', $tutoriais->id) }}">Detalhes</a>
+                    <a href="{{ route('tutoriais.edit', $tutoriais->id) }}">Alterar</a>
+                    <a href="{{ route('tutoriais.delete', $tutoriais->id) }}">Deletar</a>
+                </td>
+            </tr>
+        @endforeach
+    </table>  
 
 
     <!--Rodapé-->
