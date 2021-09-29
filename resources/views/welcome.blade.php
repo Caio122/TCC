@@ -16,9 +16,6 @@
                 <a class="nav-link text-info" href="{{route('noticias.index')}}">Notícias</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('forum')}}">Fórum</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
             </li>
             <li class="nav-item">
