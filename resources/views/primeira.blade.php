@@ -42,9 +42,6 @@
                         <a class="nav-link text-info" href="/noticias">Notícias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="/forum">Fórum</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link text-info" href="/reviews">Reviews</a>
                     </li>
                     <li class="nav-item">
