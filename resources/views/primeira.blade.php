@@ -1,36 +1,10 @@
-@extends('layouts.primeiramain')
+@extends('layouts.app')
 
 @section('title', 'The Flash')
 
 @section('content')
 
     <body>
-        
-        <!-- Cabeçalho com logo e login -->
-        <nav class="navbar navbar-expand-lg navbar-fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="{{url('/')}}">
-                    <img src="./img/logo.png" />
-                </a>
-                @auth
-                    <div class="navbar-brand ml-auto">
-                        <form action="/logout" method="POST">
-                            @csrf
-                            <a href="/logout" class="btn btn-info" onclick="event.preventDefault();
-                    this.closest('form').submit();">
-                                Sair
-                            </a>
-                        </form>
-                        </a>
-                    </div>
-                @endauth
-                @guest
-                    <div class="navbar-brand ml-auto">
-                        <button type="button" class="btn btn-info">Registre-se</button>
-                        <button type="button" class="btn btn-light">Login</button>
-                    </div>
-                </div>
-            </nav>
 
             <!-- Barra com as categorias, pesquisa e donate -->
             <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
@@ -101,27 +75,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--Rodapé-->
-            <section class="footer border-top border-info">
-                <div class="container ml-1 mt-2">
-                    <ul>
-                        <li class="grid-8">
-                            <p class="text-info">
-                                <img src="./img/logo-ape.png" width="30" height="35" alig="left">
-                                2021-2021 Digital Monkey |
-                                Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
-                                proprietários
-                            </p>
-                    </ul>
-                </div>
-                </li>
-            </section>
-
-
-
-
-
 
             <script src="./node_modules/jquery/dist/jquery.js"></script>
             <script src="node_modules/popper.js/dist/umd/popper.js"></script>

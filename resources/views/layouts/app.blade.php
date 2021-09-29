@@ -21,7 +21,6 @@
 </head>
 <body>
     <div id="app">
-<<<<<<< HEAD
         <!-- Cabeçalho com logo e login -->
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
@@ -52,10 +51,27 @@
             @endguest
         </div>
     </nav>
-
+    
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
+
+            <!--Rodapé-->
+    <section class="footer border-top border-info">
+        <div class="container ml-1 mt-2">
+            <ul>
+                <li class="grid-8">
+                    <p class="text-info">
+                        <img src="./img/logo-ape.png" width="30" height="35" alig="left">
+                        2021-2021 Digital Monkey |
+                        Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
+                        proprietários
+                    </p>
+            </ul>
+        </div>
+        </li>
+    </section>
+
+
 </body>
 </html>

@@ -1,5 +1,3 @@
-@extends('layouts.welcomemain')
-<!--Extends do cabeçalho e roda-pé -->
 @extends('layouts.app')
 @section('title', 'Digital Monkey')
 
@@ -159,27 +157,6 @@
 
         </div>
     </div>
-
-
-    <!--Rodapé-->
-    <section class="footer border-top border-info">
-        <div class="container ml-1 mt-2">
-            <ul>
-                <li class="grid-8">
-                    <p class="text-info">
-                        <img src="./img/logo-ape.png" width="30" height="35" alig="left">
-                        2021-2021 Digital Monkey |
-                        Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
-                        proprietários
-                    </p>
-            </ul>
-        </div>
-        </li>
-    </section>
-
-
-
-
 
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
