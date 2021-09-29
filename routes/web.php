@@ -5,8 +5,6 @@ use App\Http\Controllers\Noticias;
 use App\Http\Controllers\Tutoriais;
 use App\Http\Controllers\Reviews;
 use App\Http\Controllers\Sobre;
-use App\Http\Controllers\Forum;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -40,25 +38,6 @@ Route::prefix('/noticias')->group( function(){
     Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('noticias.update');
 
     Route::get('/noticias/delete/{noticia}', [Noticias::class, 'destroy'])->name('noticias.delete');
-
-});
-
-Route::prefix('/forum')->group( function(){
-
-    Route::get('/', [Forum::class, 'index'])->name('forum');
-
-    Route::get('/create', [Forum::class, 'create'])->name('forum.create');
-
-    Route::post('/create/store', [Forum::class, 'store'])->name('forum.store');
-
-    Route::get('/show/{id}', [Forum::class, 'show'])->name('forum.show');
-
-    Route::get('/edit/{id}', [Forum::class, 'edit'])->name('forum.edit');
-
-    Route::put('/edit/update/{id}', [Forum::class, 'update'])->name('forum.update');
-
-    Route::delete('/forum/delete/{noticia}', [Forum::class, 'destroy'])->name('forum.delete');
-
 
 });
 
