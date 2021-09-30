@@ -27,6 +27,35 @@
             <a class="navbar-brand" href="{{url('/')}}">
                 <img src="./img/logo.png" />
             </a>
+
+
+            <!-- Parte De Autenticação  -->
+            @auth  
+            <li class="nav-item dropdown"> 
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Sair') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+            @endauth
+        @guest
+
+
+
+
+
+
+            {{-- Parte De Autenticação que pode ser mudada
             @auth
                 <div class="navbar-brand ml-auto">
                     <form action="/logout" method="POST">
@@ -38,8 +67,8 @@
                     </form>
                     </a>
                 </div>
-            @endauth
-            @guest
+            @endauth--}}
+
                 <div class="navbar-brand ml-auto">
                     <a href="{{route('register')}}">
                         <button type="button" class="btn btn-info">Registre-se</button>

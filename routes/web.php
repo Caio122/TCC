@@ -5,6 +5,7 @@ use App\Http\Controllers\Noticias;
 use App\Http\Controllers\Tutoriais;
 use App\Http\Controllers\Reviews;
 use App\Http\Controllers\Sobre;
+use App\Http\Controllers\Inicio;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,7 @@ use App\Http\Controllers\Sobre;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Inicio::class, 'index'])->name('inicio');
 
 
 Route::prefix('/noticias')->group( function(){
