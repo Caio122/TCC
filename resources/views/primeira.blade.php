@@ -4,8 +4,6 @@
 
 @section('content')
 
-    <body>
-
             <!-- Barra com as categorias, pesquisa e donate -->
             <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
                 <a class="navbar-brand ml-auto" href="">
@@ -79,10 +77,5 @@
             <script src="./node_modules/jquery/dist/jquery.js"></script>
             <script src="node_modules/popper.js/dist/umd/popper.js"></script>
             <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-
-        </body>
-
-        </html>
 
     @endsection

@@ -89,3 +89,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/primeira', function() {
     return view('primeira');
 });
+
+Route::get('/segunda', function() {
+    return view('segunda');
+});
