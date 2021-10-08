@@ -30,27 +30,6 @@
         </form>
     </nav>
 
-    <!-- Parte Do CRUD De Notícias -->
-    <h2 style="color: white;">Notícias</h2>
-    <a style="color: white;" href ="{{ route('noticias.create') }}">Nova Notícia</a>
-    <br><br>
-    <table>
-        @foreach ($noticia as $noticias)
-            <tr>
-                <th scope="row">{{ $noticias->id }}</th>
-                <td> {{ $noticias->nome }}</td>
-                <td> {{ $noticias->quantidade }}</td>
-                <td>
-                    <a href="{{ route('noticias.show', $noticias->id) }}">Detalhes</a>
-                    <a href="{{ route('noticias.edit', $noticias->id) }}">Alterar</a>
-                    <a href="{{ route('noticias.delete', $noticias->id) }}">Deletar</a>
-                </td>
-            </tr>
-        @endforeach
-    </table>
-
-
-
     <!-- Parte De Notícias -->
     <h1 class="title text-info"> Últimas Notícias </h1>
     <a href="/primeira">

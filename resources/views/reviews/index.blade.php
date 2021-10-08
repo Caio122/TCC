@@ -30,9 +30,6 @@
         </form>
     </nav>
 
-
-    <!-- Parte Da Inserção de Novas Reviews -->
-
     <!-- Parte De Reviews -->
     <h1 class="title text-info"> Últimas Reviews </h1>
     <a href="/primeira">

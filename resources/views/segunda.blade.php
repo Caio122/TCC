@@ -33,15 +33,13 @@
     <div class="container text-justify" style="font-size: 22px">
         <div class="row">
             <!-- Título do Texto -->
-            <div class="content text-left my-5">
-                <h2 class="title text-info">Título Do Tutorial</h2>
+            <div class="content text-center my-5">
+                <h1 class="title text-info">Título Do Tutorial</h1>
                 <br>
-                <br>
-
                 <!-- 1° Passo -->
                 <div class="container text-justify" style="font-size: 22px">
                     <div class="text-center">
-                        <img src="img/brita.jpg" class="rounded" alt="..." width="600" height="400">
+                        <img src="img/brita.jpg" class="img-fluid" alt="penera" width="600" height="400">
                         <h6 class="card-title text-white">
                             1º Passo
                         </h6>

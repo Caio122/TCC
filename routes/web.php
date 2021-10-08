@@ -26,36 +26,11 @@ Route::prefix('/noticias')->group( function(){
 
     Route::get('/', [Noticias::class, 'index'])->name('noticias.index');
 
-    Route::get('/create', [Noticias::class, 'create'])->name('noticias.create');
-
-    Route::post('/create/store', [Noticias::class, 'store'])->name('noticias.store');
-
-    Route::get('/show/{id}', [Noticias::class, 'show'])->name('noticias.show');
-
-    Route::get('/edit/{id}', [Noticias::class, 'edit'])->name('noticias.edit');
-
-    Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('noticias.update');
-
-    Route::get('/noticias/delete/{noticia}', [Noticias::class, 'destroy'])->name('noticias.delete');
-
 });
 
 Route::prefix('/reviews')->group( function(){
 
     Route::get('/', [Reviews::class, 'index'])->name('reviews');
-
-    Route::get('/create', [Reviews::class, 'create'])->name('reviews.create');
-
-    Route::post('/create/store', [Reviews::class, 'store'])->name('reviews.store');
-
-    Route::get('/show/{id}', [Reviews::class, 'show'])->name('reviews.show');
-
-    Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('reviews.edit');
-
-    Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('reviews.update');
-
-    Route::delete('/reviews/delete/{noticia}', [Reviews::class, 'destroy'])->name('reviews.delete');
-
 
 });
 
@@ -77,9 +52,7 @@ Route::prefix('/tutoriais')->group( function(){
 
 });
 
-Route::get('/sobre', function() {
-    return view('sobre');
-});
+Route::get('/sobre', [Sobre::class, 'index'])->name('sobre');
 
 
 Auth::routes();
