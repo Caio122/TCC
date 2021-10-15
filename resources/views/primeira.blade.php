@@ -4,31 +4,6 @@
 
 @section('content')
 
-            <!-- Barra com as categorias, pesquisa e donate -->
-            <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
-                <a class="navbar-brand ml-auto" href="">
-                    <img src="./img/donate.png" />
-                </a>
-                <ul class="navbar-nav mr-auto px-5">
-                    <li class="nav-item">
-                        <a class="nav-link text-info" href="/noticias">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-info" href="/reviews">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-info" href="/tutoriais">Tutoriais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-info" href="/sobre">Sobre</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-auto mr-auto px-5">
-                    <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark"
-                        type="search">
-                </form>
-            </nav>
-
             <!-- Começo do texto -->
             <div class="container text-justify" style="font-size: 22px">
                 <div class="row">

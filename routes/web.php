@@ -30,7 +30,7 @@ Route::prefix('/noticias')->group( function(){
 
 Route::prefix('/reviews')->group( function(){
 
-    Route::get('/', [Reviews::class, 'index'])->name('reviews');
+    Route::get('/', [Reviews::class, 'index'])->name('reviews.index');
 
 });
 

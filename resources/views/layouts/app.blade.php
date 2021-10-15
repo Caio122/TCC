@@ -21,7 +21,8 @@
 </head>
 <body>
     <div id="app">
-        <!-- Cabeçalho com logo e login -->
+
+    <!-- Cabeçalho com logo e login -->
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{url('/')}}">
@@ -29,30 +30,25 @@
             </a>
 
 
-            <!-- Parte De Autenticação  -->
-            @auth  
-            <li class="nav-item dropdown"> 
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
-                </a>
-
+        <!-- Parte De Autenticação  -->
+        @auth  
+        <li class="nav-item dropdown"> 
+           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+            </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
+                        onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
                         {{ __('Sair') }}
                     </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </li>
-            @endauth
-        @guest
-
-
-
-
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+            </form>
+        </div>
+    </li>
+    @endauth
+@guest
 
 
             {{-- Parte De Autenticação que pode ser mudada
@@ -77,15 +73,41 @@
                         <button type="button" class="btn btn-light">Login</button>
                     </a>
                 </div>
-            @endguest
-        </div>
+        @endguest
+    </div>
+</nav>
+
+    <!-- Barra com as categorias, pesquisa e donate -->
+    <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
+        <a class="navbar-brand ml-auto" href="">
+            <img src="./img/donate.png" />
+        </a>
+        <ul class="navbar-nav mr-auto px-5">
+            <li class="nav-item">
+                <a class="nav-link text-info" href="{{route('noticias.index')}}">Notícias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="{{route('reviews.index')}}">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="{{route('tutoriais.index')}}">Tutoriais</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-info" href="{{url('sobre')}}">Sobre</a>
+            </li>
+        </ul>
+        <form class="form-inline my-auto mr-auto px-5">
+            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark"
+                type="search">
+        </form>
     </nav>
-    
+
+
         <main class="py-4">
             @yield('content')
         </main>
 
-            <!--Rodapé-->
+    <!--Rodapé-->
     <section class="footer border-top border-info">
         <div class="container ml-1 mt-2">
             <ul>
@@ -98,8 +120,8 @@
                     </p>
             </ul>
         </div>
-        </li>
-    </section>
+    </li>
+</section>
 
 
 </body>

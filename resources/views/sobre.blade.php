@@ -4,32 +4,6 @@
 
 @section('content')
 
-    
-    <!-- Barra com as categorias, pesquisa e donate -->
-    <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
-        <a class="navbar-brand ml-auto" href="">
-            <img src="./img/donate.png" />
-        </a>
-        <ul class="navbar-nav mr-auto px-5">
-            <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('noticias.index')}}">Notícias</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('reviews')}}">Reviews</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-info" href="{{route('tutoriais.index')}}">Tutoriais</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-info" href="{{url('register')}}">Sobre</a>
-            </li>
-        </ul>
-        <form class="form-inline my-auto mr-auto px-5">
-            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark"
-                type="search">
-        </form>
-    </nav>
-
     <!--Começo da parte Quem Somos-->
     <div class="container text-justify" style="font-size: 22px">
         <div class="row">
@@ -45,6 +19,7 @@
         </div>
     </div>
 
+    <!--Por Que a Digital Monkey Foi Criada?-->
     <div class="container text-justify" style="font-size: 22px">
         <div class="row">
             <div class="content text-left my-4">
@@ -60,6 +35,7 @@
         </div>
     </div>
 
+    <!--Nossa Missão?-->
     <div class="container text-justify" style="font-size: 22px">
         <div class="row">
             <div class="content text-left my-4">
