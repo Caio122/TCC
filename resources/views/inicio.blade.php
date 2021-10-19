@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('title', 'Digital Monkey')
 
 @section('content')

@@ -1,3 +1,9 @@
+@extends('layouts.app')
+
+@section('title', 'Tutoriais')
+
+@section('content')
+
 <h3>Editar Tutorial</h3>
 <form action="{{ route('tutoriais.update', $tutorial->id)}}" method="POST">
     @csrf
@@ -6,3 +12,4 @@
     <input type="submit" value="Salvar">
 </form>
 
+@endsection
