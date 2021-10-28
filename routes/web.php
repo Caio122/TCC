@@ -6,6 +6,8 @@ use App\Http\Controllers\Tutoriais;
 use App\Http\Controllers\Reviews;
 use App\Http\Controllers\Sobre;
 use App\Http\Controllers\Inicio;
+use App\Http\Controllers\Admin;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,17 +54,21 @@ Route::prefix('/tutoriais')->group( function(){
 
 });
 
+Route::get('/primeira', function() {
+    return view('noticias.primeira');
+});
+
+Route::get('/segunda', function() {
+    return view('tutoriais.segunda');
+});
+
 Route::get('/sobre', [Sobre::class, 'index'])->name('sobre');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\Dashboard::class, 'index'])->name('dashboard');
 
-Route::get('/primeira', function() {
-    return view('primeira');
-});
+Route::get('/admin', [Admin::class, 'index'])->name('admin')->middleware('auth', 'check.is.admin');
 
-Route::get('/segunda', function() {
-    return view('segunda');
-});
+

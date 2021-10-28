@@ -34,7 +34,7 @@
                                 2º Passo
                             </h6>
                             <h4 class="card-title text-white">
-                                Peneira a bita, vamo
+                                Penera a bita, vamo
                             </h4>
                         </div>
                         <br>

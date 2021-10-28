@@ -96,9 +96,9 @@
                 <a class="nav-link text-info" href="{{url('sobre')}}">Sobre</a>
             </li>
         </ul>
-        <form class="form-inline my-auto mr-auto px-5">
-            <input style="position: relative; top: 0px; right: -105px;" class="form-control form-control-sm bg-dark"
-                type="search">
+        <form action="/" method="GET" class="form-inline my-auto mr-auto px-5">
+            <input style="position: relative; top: 0px; right: -105px;" id="search" name="search" placeholder="Pesquisa" class="form-control form-control-sm bg-dark"
+                type="text">
         </form>
     </nav>
 
