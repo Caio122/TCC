@@ -5,11 +5,11 @@
 @section('content')
 
 
-    <h1 class="title text-info"> Página de Tutoriais </h1>
+    <h1 class="title text-info ml-4"> Página de Tutoriais </h1>
 
     <!-- Parte Do CRUD De Tutoriais -->
     <a href ="{{ route('tutoriais.create') }}">
-        <h4 style="color: white;">Adicionar Novo Tutorial</h4>
+        <h4 class="my-2 ml-5 btn btn-info" style="color: white;" type="button">Novo Tutorial</h4>
     </a>
     <br>
     <table>
@@ -27,16 +27,6 @@
         @endforeach
     </table>  
 
-    <!-- Início Da Parte Da Página De Tutoriais -->
-
-    {{-- <!-- Começo do texto -->
-    <div class="container text-justify" style="font-size: 22px">
-        <div class="row">
-            {{-- <!-- Título do Texto -->
-            <div class="content text-left my-5">
-                <h2 class="title text-info">Área de Tutoriais</h2>
-                <div class="container text-justify" style="font-size: 22px">
-<div class="row"> --}}
     
     <!-- Começo dos tutoriais -->
     <div class="container-fluid mt-5">
@@ -110,10 +100,10 @@
         </div>
 
 
-        <!-- Começo de Mais Lidas -->
+        <!-- Começo de Mais Vistos -->
         <div class="row bg-dark">
             <h2 class="text-info text-nowrap my-2 ml-4">
-                Mais Lidas:
+                Mais Vistos:
             </h2>
 
         </div>

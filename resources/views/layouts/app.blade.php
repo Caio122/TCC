@@ -51,21 +51,6 @@
     @endauth
 @guest
 
-
-            {{-- Parte De Autenticação que pode ser mudada
-            @auth
-                <div class="navbar-brand ml-auto">
-                    <form action="/logout" method="POST">
-                        @csrf
-                        <a href="/logout" class="btn btn-info" onclick="event.preventDefault();
-                        this.closest('form').submit();">
-                            Sair
-                        </a>
-                    </form>
-                    </a>
-                </div>
-            @endauth--}}
-
                 <div class="navbar-brand ml-auto">
                     <a href="{{route('register')}}">
                         <button type="button" class="btn btn-info">Registre-se</button>
@@ -98,7 +83,7 @@
             </li>
         </ul>
         <form action="/" method="GET" class="form-inline my-auto mr-auto px-5">
-            <input style="position: relative; top: 0px; right: -105px;" id="search" name="search" placeholder="Pesquisa" class="form-control form-control-sm bg-dark"
+            <input style="position: relative; top: 0px; right: -105px; color:white" id="search" name="search" placeholder="Pesquisa" class="form-control form-control-sm bg-dark"
                 type="text">
         </form>
     </nav>
