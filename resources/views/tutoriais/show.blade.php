@@ -7,7 +7,7 @@
 <h3>Informações do Tutorial</h3>
 
 <p>ID: {{ $tutorial->id }}</p>
-<p>Nome: {{ $tutorial->nome }} </p>
+<p>Nome: {{ $tutorial->titulo }} </p>
 
 <a href=" {{ route('tutoriais.index') }}">Voltar</a>
 

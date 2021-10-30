@@ -9,5 +9,5 @@ class Tutorial extends Model
 {
     protected $table = 'tutorials';
     use HasFactory;
-    protected $fillable = ['nome'];
+    protected $fillable = ['titulo'];
 }

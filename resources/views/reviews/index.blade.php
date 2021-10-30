@@ -4,6 +4,21 @@
 
 @section('content')
 
+<!-- Adição da Nova Notícia Para o usuário -->
+<table>
+    @foreach ($review as $reviews)
+       <tr>
+              <th scope="row">{{ $reviews->id }}</th>
+              <td> {{ $reviews->titulo }}</td>
+              <td>
+                  <a href="{{ route('admin.reviews.show', $reviews->id) }}">Detalhes</a>
+                  <a href="{{ route('admin.reviews.edit', $reviews->id) }}">Alterar</a>
+                  <a href="{{ route('admin.reviews.delete', $reviews->id) }}">Deletar</a>
+              </td>
+          </tr>
+      @endforeach
+  </table>  
+
     <!-- Parte De Reviews -->
     <h1 class="title text-info"> Últimas Reviews </h1>
     <a href="/primeira">

@@ -8,7 +8,7 @@
 <form action="{{ route('tutoriais.update', $tutorial->id)}}" method="POST">
     @csrf
     @method('PUT')
-    <input type="text" name="nome" value="{{ $tutorial->nome }}">
+    <input type="text" name="nome" value="{{ $tutorial->titulo }}">
     <input type="submit" value="Salvar">
 </form>
 

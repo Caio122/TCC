@@ -15,6 +15,8 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

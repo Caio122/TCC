@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Noticia;
+use App\Models\Review;
 
 class Reviews extends Controller
 {
@@ -14,17 +14,18 @@ class Reviews extends Controller
      */
     public function index()
     {
-        return view('reviews.index');
+        $review = Review::where('status', '=', true)->get();
+        return view('reviews.index', compact(['review']));
     }
-
-    /**
+   /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        $review = Review::all();
+        return view('admin.reviews.create', compact('review'));
     }
 
     /**
@@ -35,7 +36,10 @@ class Reviews extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $review = new Review();
+        $review->titulo = $request->input('titulo');
+        $review->save();
+        return redirect()->route('reviews.index', compact('review'));
     }
 
     /**
@@ -46,7 +50,8 @@ class Reviews extends Controller
      */
     public function show($id)
     {
-        //
+        $review = Review::where('id', $id)->first();
+        return view('admin.reviews.show', compact(['review']));
     }
 
     /**
@@ -57,7 +62,11 @@ class Reviews extends Controller
      */
     public function edit($id)
     {
-        //
+        $review = Review::find($id);
+        if (isset($review)) {
+            return view('admin.reviews.edit', compact('review'));
+        }
+        return view('reviews.index');
     }
 
     /**
@@ -69,7 +78,13 @@ class Reviews extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $review = Review::find($id);
+        if (isset($review)) {
+            $review->titulo = $request->input('titulo'); 
+            //caso queira adicionar mais variaveis é pra mudar depois do arrow
+            $review->save();
+        }
+        return redirect()->route('reviews.index', compact('review'));
     }
 
     /**
@@ -78,8 +93,14 @@ class Reviews extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    
+    public function destroy(Request $request, $id) {
+        $review = Review::find($id);
+        if (isset($review)) {
+            $review->status = false;
+            $review->save();
+        }
+        return redirect()->route('reviews.index', compact('review'));
     }
 }
+

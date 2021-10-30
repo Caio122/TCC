@@ -12,6 +12,7 @@ class Tutoriais extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $tutorial = Tutorial::where('status', '=', true)->get();
@@ -38,7 +39,7 @@ class Tutoriais extends Controller
     public function store(Request $request)
     {
         $tutorial = new Tutorial();
-        $tutorial->nome = $request->input('nome');
+        $tutorial->titulo = $request->input('titulo');
         $tutorial->save();
         return redirect()->route('tutoriais.index', compact('tutorial'));
     }
@@ -81,7 +82,7 @@ class Tutoriais extends Controller
     {
         $tutorial = Tutorial::find($id);
         if (isset($tutorial)) {
-            $tutorial->nome = $request->input('nome'); 
+            $tutorial->titulo = $request->input('titulo'); 
             //caso queira adicionar mais variaveis é pra mudar depois do arrow
             $tutorial->save();
         }

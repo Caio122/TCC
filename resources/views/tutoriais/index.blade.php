@@ -16,8 +16,7 @@
       @foreach ($tutorial as $tutoriais)
          <tr>
                 <th scope="row">{{ $tutoriais->id }}</th>
-                <td> {{ $tutoriais->nome }}</td>
-                <td> {{ $tutoriais->quantidade }}</td>
+                <td> {{ $tutoriais->titulo }}</td>
                 <td>
                     <a href="{{ route('tutoriais.show', $tutoriais->id) }}">Detalhes</a>
                     <a href="{{ route('tutoriais.edit', $tutoriais->id) }}">Alterar</a>

@@ -28,13 +28,51 @@ Route::prefix('/noticias')->group( function(){
 
     Route::get('/', [Noticias::class, 'index'])->name('noticias.index');
 
+    Route::get('/create', [Noticias::class, 'create'])->name('noticias.create')->middleware('auth', 'check.is.admin');
+
+    Route::post('/create/store', [Noticias::class, 'store'])->name('noticias.store')->middleware('auth', 'check.is.admin');
+
+    Route::get('/show/{id}', [Noticias::class, 'show'])->name('admin.noticias.show')->middleware('auth', 'check.is.admin');
+
+    Route::get('/edit/{id}', [Noticias::class, 'edit'])->name('admin.noticias.edit')->middleware('auth', 'check.is.admin');
+
+    Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('admin.noticias.update')->middleware('auth', 'check.is.admin');
+
+    Route::get('/noticias/delete/{noticia}', [Noticias::class, 'destroy'])->name('admin.noticias.delete')->middleware('auth', 'check.is.admin');
+
 });
+
 
 Route::prefix('/reviews')->group( function(){
 
     Route::get('/', [Reviews::class, 'index'])->name('reviews.index');
 
+    Route::get('/create', [Reviews::class, 'create'])->name('reviews.create')->middleware('auth', 'check.is.admin');
+
+    Route::post('/create/store', [Reviews::class, 'store'])->name('reviews.store')->middleware('auth', 'check.is.admin');
+
+    Route::get('/show/{id}', [Reviews::class, 'show'])->name('admin.reviews.show')->middleware('auth', 'check.is.admin');
+
+    Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('admin.reviews.edit')->middleware('auth', 'check.is.admin');
+
+    Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('admin.reviews.update')->middleware('auth', 'check.is.admin');
+
+    Route::get('/reviews/delete/{review}', [Reviews::class, 'destroy'])->name('admin.reviews.delete')->middleware('auth', 'check.is.admin');
+
 });
+
+
+  Route::prefix('/admin')->group( function(){
+
+     Route::get('/', [Admin::class, 'index'])->name('home')->middleware('auth', 'check.is.admin');
+
+  });
+
+// //  Route::prefix('/admin')->group( function(){
+
+        
+    
+//         //  });
 
 Route::prefix('/tutoriais')->group( function(){
 
@@ -50,7 +88,7 @@ Route::prefix('/tutoriais')->group( function(){
 
     Route::put('/edit/update/{id}', [Tutoriais::class, 'update'])->name('tutoriais.update')->middleware('auth');
 
-    Route::get('/tutoriais/delete/{noticia}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete')->middleware('auth');
+    Route::get('/tutoriais/delete/{tutorial}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete')->middleware('auth');
 
 });
 
@@ -69,6 +107,5 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\Dashboard::class, 'index'])->name('dashboard');
 
-Route::get('/admin', [Admin::class, 'index'])->name('admin')->middleware('auth', 'check.is.admin');
 
 
