@@ -39,6 +39,8 @@ class Noticias extends Controller
     {
         $noticia = new Noticia();
         $noticia->titulo = $request->input('titulo');
+        $noticia->sbtitulo = $request->input('sbtitulo');
+        $noticia->texto = $request->input('texto');
         $noticia->save();
         return redirect()->route('noticias.index', compact('noticia'));
     }
@@ -82,6 +84,8 @@ class Noticias extends Controller
         $noticia = Noticia::find($id);
         if (isset($noticia)) {
             $noticia->titulo = $request->input('titulo'); 
+            $noticia->sbtitulo = $request->input('sbtitulo');
+            $noticia->texto = $request->input('texto');
             //caso queira adicionar mais variaveis é pra mudar depois do arrow
             $noticia->save();
         }

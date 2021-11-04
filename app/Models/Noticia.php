@@ -9,6 +9,6 @@ class Noticia extends Model
 {
     protected $table = 'noticias';
     use HasFactory;
-    protected $fillable = ['titulo'];
+    protected $fillable = ['titulo','sbtitulo','texto'];
 
 }
