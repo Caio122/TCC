@@ -11,6 +11,8 @@
         @csrf
         @method('PUT')
         <input type="text" name="titulo" value="{{ $review->titulo }}">
+        <input type="text" name="sbtitulo" value="{{ $review->sbtitulo }}">
+        <input type="text" name="texto" value="{{ $review->texto }}">
         <input type="submit" value="Salvar">
     </form>
 

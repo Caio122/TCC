@@ -38,6 +38,8 @@ class Reviews extends Controller
     {
         $review = new Review();
         $review->titulo = $request->input('titulo');
+        $review->sbtitulo = $request->input('sbtitulo');
+        $review->texto = $request->input('texto');
         $review->save();
         return redirect()->route('reviews.index', compact('review'));
     }
@@ -80,7 +82,9 @@ class Reviews extends Controller
     {
         $review = Review::find($id);
         if (isset($review)) {
-            $review->titulo = $request->input('titulo'); 
+            $review->titulo = $request->input('titulo');
+            $review->sbtitulo = $request->input('sbtitulo');
+            $review->texto = $request->input('texto');
             //caso queira adicionar mais variaveis é pra mudar depois do arrow
             $review->save();
         }

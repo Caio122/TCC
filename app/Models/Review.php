@@ -9,5 +9,5 @@ class Review extends Model
 {
     protected $table = 'reviews';
     use HasFactory;
-    protected $fillable = ['titulo'];
+    protected $fillable = ['titulo','sbtitulo','texto'];
 }

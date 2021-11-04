@@ -11,8 +11,8 @@
         @csrf
         @method('PUT')
         <input type="text" name="titulo" value="{{ $noticia->titulo }}">
-        <input type="text" name="titulo" value="{{ $noticia->sbtitulo }}">
-        <input type="text" name="titulo" value="{{ $noticia->texto }}">
+        <input type="text" name="sbtitulo" value="{{ $noticia->sbtitulo }}">
+        <input type="text" name="texto" value="{{ $noticia->texto }}">
         <input type="submit" value="Salvar">
     </form>
 

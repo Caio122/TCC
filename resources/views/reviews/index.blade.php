@@ -10,6 +10,8 @@
        <tr>
               <th scope="row">{{ $reviews->id }}</th>
               <td> {{ $reviews->titulo }}</td>
+              <td> {{ $reviews->stitulo }}</td>
+              <td> {{ $reviews->texto }}</td>
               <td>
                   <a href="{{ route('admin.reviews.show', $reviews->id) }}">Detalhes</a>
                   <a href="{{ route('admin.reviews.edit', $reviews->id) }}">Alterar</a>

@@ -9,7 +9,9 @@
 <h3 class="title-text white">Informações da Review</h3>
 
 <p>ID: {{ $review->id }}</p>
-<p>Nome: {{ $review->titulo }} </p>
+<p>Título: {{ $review->titulo }} </p>
+<p>Subtítulo: {{ $review->sbtitulo }} </p>
+<p>Texto: {{ $review->texto }} </p>
 
 <a href=" {{ route('reviews.index') }} ">Voltar</a>
 
