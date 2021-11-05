@@ -22,58 +22,61 @@
   </table>  
 
     <!-- Parte De Reviews -->
-    <h1 class="title text-info"> Últimas Reviews </h1>
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
-            </div>
-    </a>
-    <br />
-    </div>
-    <br />
+    <h1 class="title text-info ml-4"> Últimas Reviews </h1>
 
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
-            </div>
-    </a>
-    <br />
+<div class="container">
+    <div class="row">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/re4.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white">
+                Minha Review Sobre Resident Evil 4
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
-            </div>
-    </a>
-    <br />
+    <div class="row mt-4">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/re4.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white">
+                Minha Review Sobre Resident Evil 4
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/re4.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> Minha Review Sobre Resident Evil 4</h2>
-            </div>
-    </a>
-    <br />
+    <div class="row mt-4">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/re4.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white">
+                Minha Review Sobre Resident Evil 4
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
+    <div class="row mt-4">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/re4.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white">
+                Minha Review Sobre Resident Evil 4
+                </h3>
+            </a>
+        </article>
+    </div>
+
+</div>
 
 @endsection

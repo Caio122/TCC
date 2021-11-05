@@ -5,9 +5,9 @@
 @section('content')
 
 <!-- Adição da Nova Notícia Para o usuário -->
-    <table>
-      @foreach ($noticia as $noticias)
-         <tr>
+<table>
+    @foreach ($noticia as $noticias)
+        <tr>
                 <th scope="row">{{ $noticias->id }}</th>
                 <td> {{ $noticias->titulo }}</td>
                 <td> {{ $noticias->sbtitulo }}</td>
@@ -19,67 +19,65 @@
                 </td>
             </tr>
         @endforeach
-    </table>  
+</table>  
 
-    <!-- Parte De Notícias -->
-    <h1 class="title text-info"> Últimas Notícias </h1>
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h2>
-            </div>
-    </a>
-    <br />
+<!-- Parte De Notícias -->
+<h1 class="title text-info ml-4"> Últimas Notícias </h1>
+    
+<div class="container">
+    <div class="row">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/flash.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
+                    The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h2>
-            </div>
-    </a>
-    <br />
+    <div class="row mt-4">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/flash.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
+                    The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h2>
-            </div>
-    </a>
-    <br />
+    <div class="row mt-4">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/flash.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
+                    The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
-    <a href="/primeira">
-        <div style=" display: table;" class="conteudo">
-            <div style="display: table-cell;float: left;" class="imagem">
-                <img style="border: 5px solid #3299CC" src="img/flash.jpg" height="200px" width="300px">
-            </div>
-            <div style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="texto">
-                <h3 class="card-title text-white"> The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h2>
-            </div>
-    </a>
-    <br />
+    <div class="row mt-4">
+        <article class="card-post">
+            <a href="/primeira">
+                <div style="float: left;" >
+                    <img src="img/flash.jpg" height="200px" width="300px">
+                </div>
+                <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
+                    The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
+                </h3>
+            </a>
+        </article>
     </div>
-    <br />
 
- 
+</div>
 
 
 @endsection
