@@ -5,7 +5,7 @@
 @section('content')
 
 <!-- Adição da Nova Notícia Para o usuário -->
-<table>
+<table  class="text-white">
     @foreach ($review as $reviews)
        <tr>
               <th scope="row">{{ $reviews->id }}</th>
@@ -13,9 +13,9 @@
               <td> {{ $reviews->stitulo }}</td>
               <td> {{ $reviews->texto }}</td>
               <td>
-                  <a href="{{ route('admin.reviews.show', $reviews->id) }}">Detalhes</a>
-                  <a href="{{ route('admin.reviews.edit', $reviews->id) }}">Alterar</a>
-                  <a href="{{ route('admin.reviews.delete', $reviews->id) }}">Deletar</a>
+                  <a class="title text-info" href="{{ route('admin.reviews.show', $reviews->id) }}">Detalhes</a>
+                  <a class="title text-info" href="{{ route('admin.reviews.edit', $reviews->id) }}">Alterar</a>
+                  <a class="title text-info" href="{{ route('admin.reviews.delete', $reviews->id) }}">Deletar</a>
               </td>
           </tr>
       @endforeach

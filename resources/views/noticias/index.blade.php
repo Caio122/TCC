@@ -5,17 +5,16 @@
 @section('content')
 
 <!-- Adição da Nova Notícia Para o usuário -->
-<table>
+<table class="text-white">
     @foreach ($noticia as $noticias)
         <tr>
                 <th scope="row">{{ $noticias->id }}</th>
                 <td> {{ $noticias->titulo }}</td>
-                <td> {{ $noticias->sbtitulo }}</td>
-                <td> {{ $noticias->texto }}</td>
+                {{-- <img src="/img/noticias/{{ $noticia->image}}"> --}}
                 <td>
-                    <a href="{{ route('admin.noticias.show', $noticias->id) }}">Detalhes</a>
-                    <a href="{{ route('admin.noticias.edit', $noticias->id) }}">Alterar</a>
-                    <a href="{{ route('admin.noticias.delete', $noticias->id) }}">Deletar</a>
+                    <a class ="title text-info" href="{{ route('admin.noticias.show', $noticias->id) }}">Detalhes</a>
+                    <a class ="title text-info" href="{{ route('admin.noticias.edit', $noticias->id) }}">Alterar</a>
+                    <a class ="title text-info" href="{{ route('admin.noticias.delete', $noticias->id) }}">Deletar</a>
                 </td>
             </tr>
         @endforeach

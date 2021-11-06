@@ -5,7 +5,6 @@
 @section('content')
 
 <!-- Informações da Notícia -->
-
 <h3 class="title-text white">Informações da Notícia</h3>
 
 <p>ID: {{ $noticia->id }}</p>
@@ -13,6 +12,8 @@
 <p>Subtítulo: {{ $noticia->sbtitulo }} </p>
 <p>Texto: {{ $noticia->texto }} </p>
 
-<a href=" {{ route('noticias.index') }}">Voltar</a>
+
+
+ <a href=" {{ route('noticias.index') }}">Voltar</a>
 
 @endsection
