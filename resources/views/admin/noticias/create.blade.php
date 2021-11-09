@@ -24,7 +24,7 @@
     <!-- Adicionando Subtítulo da Notícia -->
         <div class="form-group"> 
             <label for="Title" class="title text-info">Subtítulo Da Notícia</label>
-            <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo" placeholder="Subtítulo da Notícia">
+            <input type="text" class="class form-control" id="sbtitulo" maxlength="180" name="sbtitulo" placeholder="Subtítulo da Notícia">
         </div>
 
     <!-- Adicionando Imagem da Notícia -->

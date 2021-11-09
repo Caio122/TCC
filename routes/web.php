@@ -32,7 +32,7 @@ Route::prefix('/noticias')->group( function(){
 
     Route::post('/create/store', [Noticias::class, 'store'])->name('noticias.store')->middleware('auth', 'check.is.admin');
 
-    Route::get('/show/{id}', [Noticias::class, 'show'])->name('admin.noticias.show')->middleware('auth', 'check.is.admin');
+    Route::get('/show/{id}', [Noticias::class, 'show'])->name('admin.noticias.show');
 
     Route::get('/edit/{id}', [Noticias::class, 'edit'])->name('admin.noticias.edit')->middleware('auth', 'check.is.admin');
 

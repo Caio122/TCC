@@ -69,8 +69,11 @@ class Noticias extends Controller
      */
     public function show($id)
     {
-        $noticia = Noticia::where('id', $id)->first();
-        return view('admin.noticias.show', compact(['noticia']));
+        // $noticia = Noticia::findorFail($id);
+        // return view('noticias.show', ['noticia' -> $noticia], compact(['noticia']));
+
+       $noticia = Noticia::where('id', $id)->first();
+       return view('noticias.show', compact(['noticia']));
     }
 
     /**
