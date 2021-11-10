@@ -17,7 +17,7 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('sbtitulo');
-            $table->string('texto');
+            $table->text('texto');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

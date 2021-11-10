@@ -53,7 +53,7 @@ class Reviews extends Controller
     public function show($id)
     {
         $review = Review::where('id', $id)->first();
-        return view('admin.reviews.show', compact(['review']));
+        return view('reviews.show', compact(['review']));
     }
 
     /**

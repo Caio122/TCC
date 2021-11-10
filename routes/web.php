@@ -51,7 +51,7 @@ Route::prefix('/reviews')->group( function(){
 
     Route::post('/create/store', [Reviews::class, 'store'])->name('reviews.store')->middleware('auth', 'check.is.admin');
 
-    Route::get('/show/{id}', [Reviews::class, 'show'])->name('admin.reviews.show')->middleware('auth', 'check.is.admin');
+    Route::get('/show/{id}', [Reviews::class, 'show'])->name('admin.reviews.show');
 
     Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('admin.reviews.edit')->middleware('auth', 'check.is.admin');
 
