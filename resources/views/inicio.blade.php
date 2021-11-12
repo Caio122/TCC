@@ -4,12 +4,76 @@
 
 @section('content')
 
+{{-- @if($search)
+<h2 class="text-white">Buscando Por:{{ $search }}
+@else
+<h2 class="text-white">Não foi possível encontrar<h2>
+@endif --}}
+
+{{-- @if(count($noticia)==0)
+    <p>Não há nada disponível</p>
+@endif --}}
+
+{{-- <div class="card-post mb-5">
+    @foreach ($noticia as $noticias)
+    <a class="image" href="{{ route('admin.noticias.show', $noticias->id)}}">
+        <div style="float: left; background-color:rgb(0, 255, 34); 
+            width: 300px;height: 200px; border: 3px solid black;">
+        </div>
+    </a>
+    <div class="card-body bg-primary">
+        <a class="card-link"
+            href="{{ route('admin.noticias.show', $noticias->id)}}">
+            <h6 class="card-subtitle mt-2 text-info">{{$titulo}}</h6>
+
+            <h4 class="card-title text-white">{{$sbtitulo}}
+            </h4>
+        </a>
+    </div>
+    @endforeach
+</div> --}}
+
+{{-- <!-- Adição da Nova Notícia Para o usuário -->
+<div class="container">
+    @foreach ($noticia as $noticias)
+        <div class="row">
+           <article class="card-post">
+               <a href="{{ route('admin.noticias.show', $noticias->id)}}">
+                   <div style="float: left; background-color:rgb(0, 255, 34); width: 300px;height: 200px; border: 3px solid black;">
+                   </div>
+                   <h3 style="display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
+                       {{$noticias->titulo}}
+                   </h3>
+               </a>
+           </article>
+       </div> --}}
+
     <!-- Começo das notícias -->
     <div class="container-fluid mt-5">
         <div class="row">
             <!-- Primeira coluna de notícias -->
             <div class="col-sm-5 mx-auto">
-                <!-- Notícias em si -->
+                <!-- Notícias em si -->        
+                {{-- <div class="card-post mb-5">
+                    @foreach ($noticia as $noticias)
+                    <a class="image" href="{{ route('admin.noticias.show', $noticias->id)}}">
+                        <div style="float: left; background-color:rgb(0, 255, 34); 
+                            width: 300px;height: 200px; border: 3px solid black;">
+                        </div>
+                    </a>
+                    <div class="card-body bg-primary">
+                        <a class="card-link"
+                            href="{{ route('admin.noticias.show', $noticias->id)}}">
+                            <h6 class="card-subtitle mt-2 text-info">{{$titulo}}</h6>
+                
+                            <h4 class="card-title text-white">{{$sbtitulo}}
+                            </h4>
+                        </a>
+                    </div>
+                    @endforeach
+                </div> --}}
+
+                <!-- Notícias em si -->        
                 <div class="card-post mb-5">
                     <a class="image" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">
                         <img class="card-img-top" src="img/img1.png" />
@@ -24,7 +88,6 @@
                             </h4>
                         </a>
                     </div>
-
                 </div>
                 <div class="card-post">
                     <a class="image" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">
@@ -37,9 +100,9 @@
                             <h4 class="card-title text-white">Frank Thorne, artista de Red Sonja, morre aos 90 anos</h4>
                         </a>
                     </div>
-
                 </div>
             </div>
+
             <!-- Segundo coluna de notícias -->
             <div class="col-sm-5 mx-auto">
                 <!-- Notícias em si-->
@@ -71,9 +134,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
 
         <!-- Começo de Mais Lidas -->
         <div class="row bg-dark">

@@ -52,7 +52,7 @@
         </div>
     </li>
     @endauth
-@guest
+        @guest
 
                 <div class="navbar-brand ml-auto">
                     <a href="{{route('register')}}">
@@ -86,11 +86,10 @@
             </li>
         </ul>
         <form action="/" method="GET" class="form-inline my-auto mr-auto px-5">
-            <input style="position: relative; top: 0px; right: -105px; color:white" id="search" name="search" placeholder="Pesquisa" class="form-control form-control-sm bg-dark"
-                type="text">
+            @csrf
+            <input type="text" style="position: relative; top: 0px; right: -105px; color:white" id="search" name="search" placeholder="Pesquisar" class="form-control form-control-sm bg-dark">
         </form>
     </nav>
-
 
         <main class="py-4">
             @yield('content')
