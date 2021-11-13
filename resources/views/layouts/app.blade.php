@@ -11,9 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{url('/')}}">
-                <img src="./img/logo.png" />
+                <img src="/img/logo.png" alt="logo">
             </a>
 
 
@@ -69,7 +69,7 @@
     <!-- Barra com as categorias, pesquisa e donate -->
     <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
         <a class="navbar-brand ml-auto" href="">
-            <img src="./img/donate.png" />
+            <img src="/img/donate.png" />
         </a>
         <ul class="navbar-nav mr-auto px-5">
             <li class="nav-item">
@@ -101,7 +101,7 @@
             <ul>
                 <li class="grid-8">
                     <p class="text-info">
-                        <img src="./img/logo-ape.png" width="30" height="35" alig="left">
+                        <img src="/img/logo-ape.png" width="30" height="35" alig="left">
                         2021-2021 Digital Monkey |
                         Todas as imagens de filmes, séries e etc são marcas registradas dos seus respectivos
                         proprietários

@@ -15,7 +15,8 @@
         <div class="row">
            <article class="card-post">
                <a href="{{ route('admin.noticias.show', $noticias->id)}}">
-                   <div style="float: left; background-color:rgb(0, 255, 34); width: 300px;height: 200px; border: 3px solid black;">
+                   <div style="float: left">
+                        <img style="width: 300px; height: 200px" src="/img/noticias/{{ $noticias->image}}">
                    </div>
                    <h3 style="display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
                        {{$noticias->titulo}}
@@ -26,13 +27,15 @@
         <tr>
                 <th scope="row">{{ $noticias->id }}</th>
                 <td> {{ $noticias->titulo }}</td>
-                {{-- <img src="/img/noticias/{{ $noticia->image}}"> --}}
                 <td>
                     <a class ="title text-info" href="{{ route('admin.noticias.show', $noticias->id) }}">Detalhes</a>
                     <a class ="title text-info" href="{{ route('admin.noticias.edit', $noticias->id) }}">Alterar</a>
-                    <a class ="title text-info" href="{{ route('admin.noticias.delete', $noticias->id) }}">Deletar</a>
+                    <form action="noticias/delete/{{$noticias->id}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                    <button type="submit" class ="btn btn-danger" href="{{ route('admin.noticias.delete', $noticias->id) }}">Deletar </button>
                 </td>
-            </tr>
+        </tr>
 
         @endforeach
 

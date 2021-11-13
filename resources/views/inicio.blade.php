@@ -14,24 +14,7 @@
     <p>Não há nada disponível</p>
 @endif --}}
 
-{{-- <div class="card-post mb-5">
-    @foreach ($noticia as $noticias)
-    <a class="image" href="{{ route('admin.noticias.show', $noticias->id)}}">
-        <div style="float: left; background-color:rgb(0, 255, 34); 
-            width: 300px;height: 200px; border: 3px solid black;">
-        </div>
-    </a>
-    <div class="card-body bg-primary">
-        <a class="card-link"
-            href="{{ route('admin.noticias.show', $noticias->id)}}">
-            <h6 class="card-subtitle mt-2 text-info">{{$titulo}}</h6>
 
-            <h4 class="card-title text-white">{{$sbtitulo}}
-            </h4>
-        </a>
-    </div>
-    @endforeach
-</div> --}}
 
 {{-- <!-- Adição da Nova Notícia Para o usuário -->
 <div class="container">
@@ -53,25 +36,21 @@
         <div class="row">
             <!-- Primeira coluna de notícias -->
             <div class="col-sm-5 mx-auto">
-                <!-- Notícias em si -->        
-                {{-- <div class="card-post mb-5">
-                    @foreach ($noticia as $noticias)
+                 <!-- Notícias em si -->        
+                     @foreach ($noticia as $noticias)
                     <a class="image" href="{{ route('admin.noticias.show', $noticias->id)}}">
-                        <div style="float: left; background-color:rgb(0, 255, 34); 
-                            width: 300px;height: 200px; border: 3px solid black;">
-                        </div>
+                        <img class="card-img-top" src="/img/noticias/{{ $noticias->image}}">
                     </a>
                     <div class="card-body bg-primary">
                         <a class="card-link"
                             href="{{ route('admin.noticias.show', $noticias->id)}}">
-                            <h6 class="card-subtitle mt-2 text-info">{{$titulo}}</h6>
+                            <h6 class="card-subtitle mt-2 text-info">{{$noticias->titulo}}</h6>
                 
-                            <h4 class="card-title text-white">{{$sbtitulo}}
+                            <h4 class="card-title text-white">{{$noticias->sbtitulo}}
                             </h4>
                         </a>
                     </div>
-                    @endforeach
-                </div> --}}
+                    @endforeach 
 
                 <!-- Notícias em si -->        
                 <div class="card-post mb-5">
@@ -105,6 +84,22 @@
 
             <!-- Segundo coluna de notícias -->
             <div class="col-sm-5 mx-auto">
+                <!-- Notícias em si-->
+                {{-- @foreach ($review as $reviews)
+                <a class="image" href="{{ route('reviews.show', $reviews->id)}}">
+                    <img class="card-img-top" src="/img/reviews/{{ $reviews->image}}">
+                </a>
+                <div class="card-body bg-primary">
+                    <a class="card-link"
+                        href="{{ route('reviews.show', $reviews->id)}}">
+                        <h6 class="card-subtitle mt-2 text-info">{{$reviews->titulo}}</h6>
+            
+                        <h4 class="card-title text-white">{{$reviews->sbtitulo}}
+                        </h4>
+                    </a>
+                </div>
+                @endforeach --}}
+
                 <!-- Notícias em si-->
                 <div class="card-post mb-5">
                     <a class="image" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO">

@@ -6,7 +6,7 @@
 
 <!-- Informações da Notícia -->
 
-<h3 class="title-text white">Informações da Review</h3>
+{{-- <h3 class="title-text white">Informações da Review</h3> --}}
 
 {{-- <p>ID: {{ $review->id }}</p>
 <p>Título: {{ $review->titulo }} </p>

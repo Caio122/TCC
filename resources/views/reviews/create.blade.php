@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Administrativo')
+@section('title', 'Criando Review')
 
 @section('content')
 
@@ -9,7 +9,7 @@
     <!-- Adicionando Título da Notícia -->
     <div id="criar-review-container" class="col-md-3 offset-md-4">
         <h1 class="title text-white">Crie Sua Review</h1>
-        <form action="{{ route('reviews.store') }}" method="POST">
+        <form action="{{ route('reviews.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Título Da Review</label>
@@ -22,6 +22,12 @@
                 <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo" placeholder="Subtítulo da Review">
             </div>
     
+        <!-- Adicionando Imagem da Review -->
+        <div class="form-group"> 
+            <label for="image" class="title text-info">Imagem Para Review:</label>
+            <input type="file" id="image" name="image" class="from-control-file">
+        </div> 
+
         <!-- Adicionando Conteúdo da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Conteúdo Da Review</label>

@@ -38,7 +38,7 @@ Route::prefix('/noticias')->group( function(){
 
     Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('admin.noticias.update')->middleware('auth', 'check.is.admin');
 
-    Route::get('/noticias/delete/{noticia}', [Noticias::class, 'destroy'])->name('admin.noticias.delete')->middleware('auth', 'check.is.admin');
+    Route::delete('/delete/{id}', [Noticias::class, 'destroy'])->name('admin.noticias.delete')->middleware('auth', 'check.is.admin');
 
 });
 
@@ -47,17 +47,17 @@ Route::prefix('/reviews')->group( function(){
 
     Route::get('/', [Reviews::class, 'index'])->name('reviews.index');
 
-    Route::get('/create', [Reviews::class, 'create'])->name('reviews.create')->middleware('auth', 'check.is.admin');
+    Route::get('/create', [Reviews::class, 'create'])->name('reviews.create')->middleware('auth');
 
-    Route::post('/create/store', [Reviews::class, 'store'])->name('reviews.store')->middleware('auth', 'check.is.admin');
+    Route::post('/create/store', [Reviews::class, 'store'])->name('reviews.store')->middleware('auth');
 
-    Route::get('/show/{id}', [Reviews::class, 'show'])->name('admin.reviews.show');
+    Route::get('/show/{id}', [Reviews::class, 'show'])->name('reviews.show');
 
-    Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('admin.reviews.edit')->middleware('auth', 'check.is.admin');
+    Route::get('/edit/{id}', [Reviews::class, 'edit'])->name('reviews.edit')->middleware('auth');
 
-    Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('admin.reviews.update')->middleware('auth', 'check.is.admin');
+    Route::put('/edit/update/{id}', [Reviews::class, 'update'])->name('reviews.update')->middleware('auth');
 
-    Route::get('/reviews/delete/{review}', [Reviews::class, 'destroy'])->name('admin.reviews.delete')->middleware('auth', 'check.is.admin');
+    Route::delete('/delete/{id}', [Reviews::class, 'destroy'])->name('reviews.delete')->middleware('auth');
 
 });
 
@@ -68,27 +68,21 @@ Route::prefix('/reviews')->group( function(){
 
   });
 
-// //  Route::prefix('/admin')->group( function(){
-
-        
-    
-//         //  });
-
 Route::prefix('/tutoriais')->group( function(){
 
     Route::get('/', [Tutoriais::class, 'index'])->name('tutoriais.index');
 
-    Route::get('/create', [Tutoriais::class, 'create'])->name('tutoriais.create')->middleware('auth');
+    Route::get('/create', [Tutoriais::class, 'create'])->name('tutoriais.create')->middleware('auth', 'check.is.admin');
 
-    Route::post('/create/store', [Tutoriais::class, 'store'])->name('tutoriais.store')->middleware('auth');
+    Route::post('/create/store', [Tutoriais::class, 'store'])->name('tutoriais.store')->middleware('auth' , 'check.is.admin');
 
     Route::get('/show/{id}', [Tutoriais::class, 'show'])->name('tutoriais.show')->middleware('auth');
 
-    Route::get('/edit/{id}', [Tutoriais::class, 'edit'])->name('tutoriais.edit')->middleware('auth');
+    Route::get('/edit/{id}', [Tutoriais::class, 'edit'])->name('tutoriais.edit')->middleware('auth', 'check.is.admin');
 
-    Route::put('/edit/update/{id}', [Tutoriais::class, 'update'])->name('tutoriais.update')->middleware('auth');
+    Route::put('/edit/update/{id}', [Tutoriais::class, 'update'])->name('tutoriais.update')->middleware('auth', 'check.is.admin');
 
-    Route::get('/tutoriais/delete/{tutorial}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete')->middleware('auth');
+    Route::delete('/delete/{id}', [Tutoriais::class, 'destroy'])->name('tutoriais.delete')->middleware('auth', 'check.is.admin');
 
 });
 

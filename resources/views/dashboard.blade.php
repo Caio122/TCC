@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Meus Tutoriais') }}</div>
+                <div class="card-header">{{ __('Minhas Reviews') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -17,7 +17,7 @@
                         </div>
                     @endif
 
-                    {{ __('Aqui é onde ficaram os tutoriais do usuário!') }}
+                    {{ __('Aqui é onde ficaram as reviews do usuário!') }}
                 </div>
             </div>
         </div>

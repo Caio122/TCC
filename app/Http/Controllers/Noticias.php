@@ -42,19 +42,19 @@ class Noticias extends Controller
         $noticia->sbtitulo = $request->input('sbtitulo');
         $noticia->texto = $request->input('texto');
         //Adição de Imagem
-        // if($request->hasFile('image') && $request->file('image')->isValid()){
+        if($request->hasFile('image') && $request->file('image')->isValid()){
 
-        //     $requestImage = $request->image;
+            $requestImage = $request->image;
+            
+            $extension = $requestImage->extension();
 
-        //     $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")). "." . $extension;
 
-        //     $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")). "." . $extension;
+            $requestImage->move(public_path('img/noticias'), $imageName);
 
-        //     $requestImage->move(public_path('img/noticias'), $imageName);
+            $noticia->image = $imageName;
 
-        //     $noticia->image = $imageName;
-
-        // }
+         }
 
         $noticia->save();
 
@@ -119,11 +119,11 @@ class Noticias extends Controller
      */
     
     public function destroy(Request $request, $id) {
-        $noticia = Noticia::find($id);
-        if (isset($noticia)) {
-            $noticia->status = false;
-            $noticia->save();
-        }
+        $noticia = Noticia::findOrFail($id)->delete();
+        // if (isset($noticia)) {
+        //     $noticia->status = false;
+        //     $noticia->save();
+        // }
         return redirect()->route('noticias.index', compact('noticia'));
     }
 }

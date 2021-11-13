@@ -27,11 +27,11 @@
             <input type="text" class="class form-control" id="sbtitulo" maxlength="180" name="sbtitulo" placeholder="Subtítulo da Notícia">
         </div>
 
-    <!-- Adicionando Imagem da Notícia -->
-        {{-- <div class="form-group"> 
+  <!-- Adicionando Imagem da Notícia -->
+        <div class="form-group"> 
             <label for="image" class="title text-info">Imagem Para Notícia:</label>
             <input type="file" id="image" name="image" class="from-control-file">
-        </div> --}}
+        </div> 
 
     <!-- Adicionando Conteúdo da Notícia -->
         <div class="form-group"> 
@@ -44,16 +44,5 @@
     </form>
 </div>
     
-    <!-- Botão de Salvar Notícia -->
-
-
-    {{-- <input style="color: white;" class="form-control bg-dark ml-4" type="text" maxlength="60" name="titulo" placeholder="Título Da Notícia"> 
-
-    <input style="color: white;" class="form-control bg-dark ml-4" type="text" maxlength="60" name="sbtitulo" placeholder="Subtítulo Da Notícia">
-
-    <textarea name="texto" rows="10" cols="20" id="texto" class="form-control"></textarea> --}}
-
-
-   
 
 @endsection

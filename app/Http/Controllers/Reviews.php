@@ -25,7 +25,7 @@ class Reviews extends Controller
     public function create()
     {
         $review = Review::all();
-        return view('admin.reviews.create', compact('review'));
+        return view('reviews.create', compact('review'));
     }
 
     /**
@@ -40,7 +40,24 @@ class Reviews extends Controller
         $review->titulo = $request->input('titulo');
         $review->sbtitulo = $request->input('sbtitulo');
         $review->texto = $request->input('texto');
+        
+        //Adição de Imagem
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+
+            $requestImage = $request->image;
+                        
+            $extension = $requestImage->extension();
+            
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")). "." . $extension;
+            
+            $requestImage->move(public_path('img/reviews'), $imageName);
+            
+            $review->image = $imageName;
+        
+        }
+
         $review->save();
+
         return redirect()->route('reviews.index', compact('review'));
     }
 
@@ -66,7 +83,7 @@ class Reviews extends Controller
     {
         $review = Review::find($id);
         if (isset($review)) {
-            return view('admin.reviews.edit', compact('review'));
+            return view('reviews.edit', compact('review'));
         }
         return view('reviews.index');
     }

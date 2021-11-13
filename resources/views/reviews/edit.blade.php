@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Administrativo')
+@section('title', 'Editando Review')
 
 @section('content')
 
     <!-- Editando Título De Review Já Criada -->
     <div id="editar-review-container" class="col-md-3 offset-md-4">
         <h1 class="text-white">Editar Review</h1>
-        <form action="{{ route('admin.reviews.update', $review->id) }}" method="POST">
+        <form action="{{ route('reviews.update', $review->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">

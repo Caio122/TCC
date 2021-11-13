@@ -12,8 +12,9 @@
     @foreach ($review as $reviews)
         <div class="row">
            <article class="card-post">
-               <a href="{{ route('admin.reviews.show', $reviews->id)}}">
-                   <div style="float: left; background-color:rgb(0, 255, 34); width: 300px;height: 200px; border: 3px solid black;">
+               <a href="{{ route('reviews.show', $reviews->id)}}">
+                   <div style="float: left">
+                        <img style="width: 300px; height: 200px" src="/img/reviews/{{ $reviews->image}}">
                    </div>
                    <h3 style="display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
                        {{$reviews->titulo}}
@@ -24,11 +25,10 @@
         <tr>
                 <th scope="row">{{ $reviews->id }}</th>
                 <td> {{ $reviews->titulo }}</td>
-                {{-- <img src="/img/reviews/{{ $noticia->image}}"> --}}
                 <td>
-                    <a class ="title text-info" href="{{ route('admin.reviews.show', $reviews->id) }}">Detalhes</a>
-                    <a class ="title text-info" href="{{ route('admin.reviews.edit', $reviews->id) }}">Alterar</a>
-                    <a class ="title text-info" href="{{ route('admin.reviews.delete', $reviews->id) }}">Deletar</a>
+                    <a class ="title text-info" href="{{ route('reviews.show', $reviews->id) }}">Detalhes</a>
+                    <a class ="title text-info" href="{{ route('reviews.edit', $reviews->id) }}">Alterar</a>
+                    <a class ="title text-info" href="{{ route('reviews.delete', $reviews->id) }}">Deletar</a>
                 </td>
             </tr>
     @endforeach
