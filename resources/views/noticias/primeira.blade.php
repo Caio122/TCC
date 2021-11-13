@@ -6,7 +6,7 @@
 
             <!-- Começo do texto -->
             <div class="container text-justify" style="font-size: 22px">
-                <div class="row">
+                <div class="col">
                     <!-- Título do Texto -->
                     <div class="content text-center my-5">
                         <h1 class="title text-info">Título Da Notícia</h1>
