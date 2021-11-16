@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tutorial;
+use App\Models\User;
 
 class Tutoriais extends Controller
 {
@@ -40,6 +41,10 @@ class Tutoriais extends Controller
     {
         $tutorial = new Tutorial();
         $tutorial->titulo = $request->input('titulo');
+
+        $user= auth()->user();
+        $tutorial->user_id= $user->id;
+        
         $tutorial->save();
         return redirect()->route('tutoriais.index', compact('tutorial'));
     }
@@ -53,7 +58,8 @@ class Tutoriais extends Controller
     public function show($id)
     {
         $tutorial = Tutorial::where('id', $id)->first();
-        return view('tutoriais.show', compact(['tutorial']));
+        $tutorialOwner = User::where('id', $tutorial->user_id)->first()->toArray();
+        return view('tutoriais.show', ['tutorial' => $tutorial, 'tutorialOwner' => $tutorialOwner], compact(['tutorial']));
     }
 
     /**
@@ -97,11 +103,7 @@ class Tutoriais extends Controller
      */
     
     public function destroy(Request $request, $id) {
-        $tutorial = Tutorial::find($id);
-        if (isset($tutorial)) {
-            $tutorial->status = false;
-            $tutorial->save();
-        }
+        $review = Review::findOrFail($id)->delete();
         return redirect()->route('tutoriais.index', compact('tutorial'));
     }
 }

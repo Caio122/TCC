@@ -8,7 +8,7 @@
     <div class="container">
         <h1 class="title text-info"> Últimas Reviews </h1>
 
-        <!-- Adição da Nova Review Para o usuário -->
+        <!-- Adição da Nova Review Para o Usuário -->
         @foreach ($review as $reviews)
             <div class="row">
                 <article class="card-post">
@@ -27,9 +27,13 @@
                 <th scope="row">{{ $reviews->id }}</th>
                 <td> {{ $reviews->titulo }}</td>
                 <td>
-                    <a class="title text-info" href="{{ route('reviews.show', $reviews->id) }}">Detalhes</a>
                     <a class="title text-info" href="{{ route('reviews.edit', $reviews->id) }}">Alterar</a>
-                    <a class="title text-info" href="{{ route('reviews.delete', $reviews->id) }}">Deletar</a>
+                    <form action="reviews/delete/{{ $reviews->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger"
+                            href="{{ route('reviews.delete', $reviews->id) }}">Deletar </button>
+                    </form>
                 </td>
             </tr>
         @endforeach

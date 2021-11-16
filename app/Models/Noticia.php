@@ -9,6 +9,14 @@ class Noticia extends Model
 {
     protected $table = 'noticias';
     use HasFactory;
-    protected $fillable = ['titulo','sbtitulo','texto'];
+    protected $fillable = [
+        'titulo',
+        'sbtitulo',
+        'texto',
+    ];
+
+    public function user(){
+        return $this->BelongsTo('App\Models\User');
+    }
 
 }

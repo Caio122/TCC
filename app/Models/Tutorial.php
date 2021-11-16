@@ -9,5 +9,12 @@ class Tutorial extends Model
 {
     protected $table = 'tutorials';
     use HasFactory;
-    protected $fillable = ['titulo'];
+    protected $fillable = [
+        'titulo'
+    ];
+
+    public function user(){
+        return $this->BelongsTo('App\Models\User');
+    }
+    
 }

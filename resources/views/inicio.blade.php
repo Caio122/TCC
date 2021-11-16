@@ -4,18 +4,6 @@
 
 @section('content')
 
-{{-- @if($search)
-<h2 class="text-white">Buscando Por:{{ $search }}
-@else
-<h2 class="text-white">Não foi possível encontrar<h2>
-@endif --}}
-
-{{-- @if(count($noticia)==0)
-    <p>Não há nada disponível</p>
-@endif --}}
-
-
-
 {{-- <!-- Adição da Nova Notícia Para o usuário -->
 <div class="container">
     @foreach ($noticia as $noticias)
@@ -84,6 +72,8 @@
 
             <!-- Segundo coluna de notícias -->
             <div class="col-sm-5 mx-auto">
+
+                
                 <!-- Notícias em si-->
                 {{-- @foreach ($review as $reviews)
                 <a class="image" href="{{ route('reviews.show', $reviews->id)}}">

@@ -13,21 +13,21 @@
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Review</label>
                 <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"
-                    placeholder="Título da Review" value="{{ $review->titulo }}">
+                    placeholder="Título da Review" value="{{ $review->titulo }}" required autocomplete="titulo">
             </div>
 
             <!-- Editando subtítulo De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Review</label>
                 <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo"
-                    placeholder="Subtítulo da Review" value="{{ $review->sbtitulo }}">
+                    placeholder="Subtítulo da Review" value="{{ $review->sbtitulo }}" required autocomplete="sbtitulo">
             </div>
 
             <!-- Editando Conteúdo De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Conteúdo Da Review</label>
                 <input type="text" name="texto" id="texto" class="form-control" placeholder="Conteúdo da Review"
-                 value="{{ $review->texto }}">
+                 value="{{ $review->texto }}" required autocomplete="texto">
             </div>
             <input class="btn btn-info" type="submit" value="Salvar">
         </form>

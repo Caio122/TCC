@@ -5,18 +5,11 @@
 @section('content')
 
 <!-- Informações da Notícia -->
-{{-- <h3 class="title text-white">Informações da Notícia</h3>
 
-<p class="title text-white">ID: {{ $noticia->id }}</p>
-<p class="title text-white">Título: {{ $noticia->titulo }} </p>
-<p class="title text-white">Subtítulo: {{ $noticia->sbtitulo }} </p>
-<p class="title text-white">Texto: {{ $noticia->texto }} </p> --}}
-
-
-
+<h1 class="text-white">Notícia Feita Por: {{$noticiaOwner ['name']}}</h1>
  <!-- Começo do texto -->
  <div class="container text-justify" style="font-size: 22px">
-    <div class="row">
+    <div class="col">
         <!-- Título do Texto -->
         <div class="content text-center my-5">
             <h1 class="title text-info">{{ $noticia->titulo }}</h1>
@@ -25,12 +18,12 @@
                 {{ $noticia->sbtitulo }}
             </p>
             <!-- Imagem do Texto -->
-            {{-- <div class="text-center">
-                <img src="img/flash.jpg" class="img-fluid">
-            </div> --}}
+            <div class="text-center">
+                <img style="width: 480px; height: 360px" src="/img/noticias/{{ $noticia->image }}" class="img-fluid">
+            </div>
         </div>
         <!-- Texto em si -->
-        <div class="content">
+        <div class="content text-center my-5">
             <p class="text-white">
                 {{ $noticia->texto }} 
             </p>

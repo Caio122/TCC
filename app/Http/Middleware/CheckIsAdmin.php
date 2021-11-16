@@ -16,10 +16,9 @@ class CheckIsAdmin
      */
     public function handle(Request $request, Closure $next)
     {   
-        $user = auth()->user();
-        if (!in_array($user->email, ['caio@gmail.com'])){
-            return redirect ('/');
-        }
+        if (!auth()->check() || !auth()->user()->admin) {
+            abort(403);
+        } 
         return $next($request);
 
     }

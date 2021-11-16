@@ -18,25 +18,25 @@
             @csrf
         <div class="form-group"> 
             <label for="Title" class="title text-info">Título Da Notícia</label>
-            <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo" placeholder="Título da Notícia">
+            <input id="titulo" type="text" class="class form-control"  maxlength="60" name="titulo" placeholder="Título da Notícia" required autocomplete="titulo">
         </div>
 
     <!-- Adicionando Subtítulo da Notícia -->
         <div class="form-group"> 
             <label for="Title" class="title text-info">Subtítulo Da Notícia</label>
-            <input type="text" class="class form-control" id="sbtitulo" maxlength="180" name="sbtitulo" placeholder="Subtítulo da Notícia">
+            <input id="sbtitulo" type="text" class="class form-control" maxlength="180" name="sbtitulo" placeholder="Subtítulo da Notícia" required autocomplete="sbtitulo">
         </div>
 
   <!-- Adicionando Imagem da Notícia -->
         <div class="form-group"> 
             <label for="image" class="title text-info">Imagem Para Notícia:</label>
-            <input type="file" id="image" name="image" class="from-control-file">
+            <input type="file" id="image" name="image" class="from-control-file" required autocomplete="image">
         </div> 
 
     <!-- Adicionando Conteúdo da Notícia -->
         <div class="form-group"> 
             <label for="Title" class="title text-info">Conteúdo Da Notícia</label>
-            <textarea name="texto" id="texto" class="form-control" placeholder="Conteúdo da Notícia"></textarea>
+            <textarea name="texto" id="texto" class="form-control" placeholder="Conteúdo da Notícia" required autocomplete="texto"></textarea>
         </div>
 
         <!-- Botão Para Salvar Notícia -->

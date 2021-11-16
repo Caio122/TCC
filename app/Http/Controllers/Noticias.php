@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Noticia;
+use App\Models\User;
 
 class Noticias extends Controller
 {
@@ -53,9 +54,10 @@ class Noticias extends Controller
             $requestImage->move(public_path('img/noticias'), $imageName);
 
             $noticia->image = $imageName;
-
-         }
-
+        }
+        
+        $user= auth()->user();
+        $noticia->user_id= $user->id;
         $noticia->save();
 
         return redirect()->route('noticias.index', compact('noticia'));
@@ -73,7 +75,8 @@ class Noticias extends Controller
         // return view('noticias.show', ['noticia' -> $noticia], compact(['noticia']));
 
        $noticia = Noticia::where('id', $id)->first();
-       return view('noticias.show', compact(['noticia']));
+       $noticiaOwner = User::where('id', $noticia->user_id)->first()->toArray();
+       return view('noticias.show', ['noticia' => $noticia, 'noticiaOwner' => $noticiaOwner], compact(['noticia']));
     }
 
     /**
@@ -120,11 +123,17 @@ class Noticias extends Controller
     
     public function destroy(Request $request, $id) {
         $noticia = Noticia::findOrFail($id)->delete();
-        // if (isset($noticia)) {
-        //     $noticia->status = false;
-        //     $noticia->save();
-        // }
         return redirect()->route('noticias.index', compact('noticia'));
     }
+
+    // public function home()
+    // {
+    //     $user = auth()->user();
+
+    //     $noticia = $user->noticias;
+
+    //     return view('admin.home', ['noticia' => $noticia]);
+
+    // }
 }
 

@@ -13,25 +13,25 @@
                 @csrf
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Título Da Review</label>
-                <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo" placeholder="Título da Review">
+                <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo" placeholder="Título da Review" required autocomplete="titulo">
             </div>
     
         <!-- Adicionando Subtítulo da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Subtítulo Da Review</label>
-                <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo" placeholder="Subtítulo da Review">
+                <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo" placeholder="Subtítulo da Review" required autocomplete="sbtitulo">
             </div>
     
         <!-- Adicionando Imagem da Review -->
         <div class="form-group"> 
             <label for="image" class="title text-info">Imagem Para Review:</label>
-            <input type="file" id="image" name="image" class="from-control-file">
+            <input type="file" id="image" name="image" class="from-control-file" required autocomplete="image">
         </div> 
 
         <!-- Adicionando Conteúdo da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Conteúdo Da Review</label>
-                <textarea name="texto" id="texto" class="form-control" placeholder="Conteúdo da Review"></textarea>
+                <textarea name="texto" id="texto" class="form-control" placeholder="Conteúdo da Review" required autocomplete="texto"></textarea>
             </div>
     
             <!-- Botão Para Salvar Review -->

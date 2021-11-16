@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Review;
+use App\Models\User;
 
 class Reviews extends Controller
 {
@@ -56,6 +57,8 @@ class Reviews extends Controller
         
         }
 
+        $user= auth()->user();
+        $review->user_id= $user->id;
         $review->save();
 
         return redirect()->route('reviews.index', compact('review'));
@@ -70,7 +73,9 @@ class Reviews extends Controller
     public function show($id)
     {
         $review = Review::where('id', $id)->first();
-        return view('reviews.show', compact(['review']));
+        $reviewOwner = User::where('id', $review->user_id)->first()->toArray();
+        return view('reviews.show', ['review' => $review, 'reviewOwner' => $reviewOwner], compact(['review']));
+    
     }
 
     /**
@@ -116,12 +121,18 @@ class Reviews extends Controller
      */
     
     public function destroy(Request $request, $id) {
-        $review = Review::find($id);
-        if (isset($review)) {
-            $review->status = false;
-            $review->save();
-        }
+        $review = Review::findOrFail($id)->delete();
         return redirect()->route('reviews.index', compact('review'));
     }
+
+    // public function home()
+    // {
+    //     $user = auth()->user();
+
+    //     $review = $user->reviews;
+
+    //     return view('admin.home', ['review' => $review]);
+
+    // }
 }
 
