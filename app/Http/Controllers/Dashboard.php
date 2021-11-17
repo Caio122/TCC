@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Review;
 
 class Dashboard extends Controller
 {
@@ -21,8 +22,21 @@ class Dashboard extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    public function dashboard()
+    {
+        $user = auth()->user();
+
+        $review = $user->reviews;
+
+        return view('dashboard', ['review' => $review]);
+
+    }
+
     public function index()
     {
-        return view('dashboard');
+        $review =  Review::all();
+
+        return view('dashboard', ['review' => $review]);
     }
 }

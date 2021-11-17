@@ -24,20 +24,6 @@
                     </a>
                 </article>
             </div>
-            <tr>
-                <th scope="row">{{ $noticias->id }}</th>
-                <td> {{ $noticias->titulo }}</td>
-                <td>
-                    <a class="title text-info" href="{{ route('admin.noticias.edit', $noticias->id) }}">Alterar</a>
-                    <form action="noticias/delete/{{ $noticias->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger"
-                            href="{{ route('admin.noticias.delete', $noticias->id) }}">Deletar </button>
-                    </form>
-                </td>
-            </tr>
-
         @endforeach
 
         <!-- Aqui Começa a Lista Das Notícias-->

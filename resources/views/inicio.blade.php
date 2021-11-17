@@ -73,9 +73,8 @@
             <!-- Segundo coluna de notícias -->
             <div class="col-sm-5 mx-auto">
 
-                
-                <!-- Notícias em si-->
-                {{-- @foreach ($review as $reviews)
+                <!-- Reviews em si-->
+                @foreach ($review as $reviews)
                 <a class="image" href="{{ route('reviews.show', $reviews->id)}}">
                     <img class="card-img-top" src="/img/reviews/{{ $reviews->image}}">
                 </a>
@@ -88,7 +87,7 @@
                         </h4>
                     </a>
                 </div>
-                @endforeach --}}
+                @endforeach
 
                 <!-- Notícias em si-->
                 <div class="card-post mb-5">

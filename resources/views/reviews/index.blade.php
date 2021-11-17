@@ -23,19 +23,6 @@
                     </a>
                 </article>
             </div>
-            <tr>
-                <th scope="row">{{ $reviews->id }}</th>
-                <td> {{ $reviews->titulo }}</td>
-                <td>
-                    <a class="title text-info" href="{{ route('reviews.edit', $reviews->id) }}">Alterar</a>
-                    <form action="reviews/delete/{{ $reviews->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger"
-                            href="{{ route('reviews.delete', $reviews->id) }}">Deletar </button>
-                    </form>
-                </td>
-            </tr>
         @endforeach
 
         <!-- Parte De Reviews -->

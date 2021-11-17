@@ -64,9 +64,9 @@ Route::prefix('/reviews')->group( function(){
 
   Route::prefix('/admin')->group( function(){
 
-     Route::get('/', [Admin::class, 'index'])->name('home')->middleware('auth', 'check.is.admin');
-
-    // Route::get('/', [Noticias::class, 'home'])->name('home')->middleware('auth', 'check.is.admin');
+    Route::get('/', [Admin::class, 'index'])->name('home')->middleware('auth', 'check.is.admin');
+    
+    Route::get('/', [Admin::class, 'home'])->name('home')->middleware('auth', 'check.is.admin');
 
 
   });
@@ -103,6 +103,8 @@ Route::get('/sobre', [Sobre::class, 'index'])->name('sobre');
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\Dashboard::class, 'index'])->name('dashboard');
+
+Route::get('/dashboard', [App\Http\Controllers\Dashboard::class, 'dashboard'])->name('dashboard');
 
 
 
