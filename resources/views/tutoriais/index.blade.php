@@ -5,29 +5,9 @@
 @section('content')
 
 
-    <h1 class="title text-info ml-4"> Página de Tutoriais </h1>
-
-    <!-- Parte Do CRUD De Tutoriais -->
-    <a href ="{{ route('tutoriais.create') }}">
-        <h4 class="my-2 ml-5 btn btn-info" style="color: white;" type="button">Novo Tutorial</h4>
-    </a>
-    <br>
-    <table>
-      @foreach ($tutorial as $tutoriais)
-         <tr>
-                <th scope="row">{{ $tutoriais->id }}</th>
-                <td> {{ $tutoriais->titulo }}</td>
-                <td>
-                    <a href="{{ route('tutoriais.show', $tutoriais->id) }}">Detalhes</a>
-                    <a href="{{ route('tutoriais.edit', $tutoriais->id) }}">Alterar</a>
-                    <a href="{{ route('tutoriais.delete', $tutoriais->id) }}">Deletar</a>
-                </td>
-            </tr>
-        @endforeach
-    </table>  
-
     
     <!-- Começo dos tutoriais -->
+    <h1 class="title text-info ml-5"> Últimos Tutoriais</h1>
     <div class="container-fluid mt-5">
         <div class="row">
             <!-- Primeira coluna de tutoriais -->

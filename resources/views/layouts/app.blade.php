@@ -56,9 +56,9 @@
                             @endif
                             
                             <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                                                                                document.getElementById('logout-form').submit();">
-                            {{ __('Sair') }}
+                                onclick="event.preventDefault();
+                                                                                                                    document.getElementById('logout-form').submit();">
+                                {{ __('Sair') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -83,7 +83,7 @@
 
         <!-- Barra com as categorias, pesquisa e donate -->
         <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
-            <a class="navbar-brand ml-auto" href="">
+            <a class="navbar-brand ml-5" href="">
                 <img src="/img/donate.png" />
             </a>
             <ul class="navbar-nav mr-auto px-5">
@@ -100,11 +100,6 @@
                     <a class="nav-link text-info" href="{{ url('sobre') }}">Sobre</a>
                 </li>
             </ul>
-            <form action="/" method="GET" class="form-inline my-auto mr-auto px-5">
-                @csrf
-                <input type="text" style="position: relative; top: 0px; right: -105px; color:white" id="search"
-                    name="search" placeholder="Pesquisar" class="form-control form-control-sm bg-dark">
-            </form>
         </nav>
 
         <main class="py-4">

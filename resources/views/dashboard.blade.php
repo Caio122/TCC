@@ -4,11 +4,9 @@
 
 @section('content')
 
-    <h1 class="text-white">Tristeza, rapaiz </h1>
-
-
     <!-- Criação De Novas Reviews -->
     <div class="col">
+        <h1 class="title text-info">Adicionar Review</h1>
         <a href="{{ route('reviews.create') }}">
             <h4 class="btn btn-info" style="color: white;" type="button">Nova Review</h4>
         </a>
