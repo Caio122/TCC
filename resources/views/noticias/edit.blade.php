@@ -12,26 +12,28 @@
             @method('PUT')
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Notícia</label>
-                <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"
-                    placeholder="Título da Notícia" value="{{ $noticia->titulo }}" required autocomplete="titulo">
+                <textarea type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"
+                    placeholder="Título da Notícia" value="{{ $noticia->titulo }}" required autocomplete="titulo"
+                    wrap="soft"></textarea>
             </div>
 
             <!-- Editando Subtítulo De Notícia Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Notícia</label>
-                <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo"
-                    placeholder="Subtítulo da Notícia" value="{{ $noticia->sbtitulo }}" required autocomplete="sbtitulo">
+                <textarea type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo"
+                    placeholder="Subtítulo da Notícia" value="{{ $noticia->sbtitulo }}" required autocomplete="sbtitulo"
+                    wrap="soft"></textarea>
             </div>
 
             <!-- Editando Conteúdo De Notícia Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Conteúdo Da Notícia</label>
-                <input type="text" name="texto" id="texto" class="form-control" placeholder="Conteúdo da Notícia"
-                 value="{{ $noticia->texto }}" required autocomplete="texto">
+                <textarea type="text" name="texto" id="texto" class="form-control" placeholder="Conteúdo da Notícia"
+                    value="{{ $noticia->texto }}" required autocomplete="texto" wrap="soft" cols="30" row="12"></textarea>
             </div>
             <input class="btn btn-info" type="submit" value="Salvar">
         </form>
     </div>
-    
+
 
 @endsection
