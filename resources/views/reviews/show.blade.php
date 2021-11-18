@@ -6,7 +6,7 @@
 
 <!-- Informações da Notícia -->
 
-<h1 class="text-white">Review Feita Por: {{$reviewOwner ['name']}}</h1>
+<h3 class="text-white">Review Feita Por: {{$reviewOwner ['name']}}</h3>
  <!-- Começo do texto -->
  <div class="container text-justify" style="font-size: 22px">
     <div class="col">
@@ -19,7 +19,7 @@
             </p>
             <!-- Imagem do Texto -->
             <div class="text-center">
-                <img style="width: 480px; height: 360px" src="/img/reviews/{{ $review->image }}" class="img-fluid">
+                <img style="height:360px; width:480px; " src="/img/reviews/{{ $review->image }}" class="img-fluid">
             </div>
         </div>
         <!-- Texto em si -->

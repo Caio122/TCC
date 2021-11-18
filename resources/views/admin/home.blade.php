@@ -40,14 +40,14 @@
                             <th scope="row">{{ $loop->index + 1 }}</th>
                             <td>{{ $noticias->titulo }}</td>
                             <td>
-                                <a href="{{ route('admin.noticias.show', $noticias->id) }}">
+                                <a href="{{ route('noticias.show', $noticias->id) }}">
                                     <button type="submit" class="btn btn-info">
                                         Ir Para Notícia
                                     </button>
                                 </a>
                             </td>
                             <td>
-                                <a href="{{ route('admin.noticias.edit', $noticias->id) }}">
+                                <a href="{{ route('noticias.edit', $noticias->id) }}">
                                     <button type="submit" class="btn btn-info">
                                         Editar
                                     </button>
@@ -58,7 +58,7 @@
                                 <form action="noticias/delete/{{ $noticias->id }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <a href="{{ route('admin.noticias.delete', $noticias->id) }}">
+                                    <a href="{{ route('noticias.delete', $noticias->id) }}">
                                         <button type="submit" class="btn btn-danger">
                                             Deletar
                                         </button>
@@ -98,7 +98,7 @@
                             <td>
                                 <a href="{{ route('reviews.show', $reviews->id) }}">
                                     <button type="submit" class="btn btn-info">
-                                        Ir Para Notícia
+                                        Ir Para Review
                                     </button>
                                 </a>
                             </td>
@@ -153,7 +153,7 @@
                             <td>
                                 <a href="{{ route('tutoriais.show', $tutoriais->id) }}">
                                     <button type="submit" class="btn btn-info">
-                                        Ir Para Notícia
+                                        Ir Para Tutorial
                                     </button>
                                 </a>
                             </td>

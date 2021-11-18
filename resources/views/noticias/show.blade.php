@@ -6,7 +6,7 @@
 
 <!-- Informações da Notícia -->
 
-<h1 class="text-white">Notícia Feita Por: {{$noticiaOwner ['name']}}</h1>
+<h3 class="text-white">Notícia Feita Por: {{$noticiaOwner ['name']}}</h3>
  <!-- Começo do texto -->
  <div class="container text-justify" style="font-size: 22px">
     <div class="col">

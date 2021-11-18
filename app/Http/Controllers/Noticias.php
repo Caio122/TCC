@@ -27,7 +27,7 @@ class Noticias extends Controller
     public function create()
     {
         $noticia = Noticia::all();
-        return view('admin.noticias.create', compact('noticia'));
+        return view('noticias.create', compact('noticia'));
     }
 
     /**
@@ -57,7 +57,7 @@ class Noticias extends Controller
         }
         
         $user= auth()->user();
-        $noticia->user_id= $user->id;
+        $noticia->user_id = $user->id;
         $noticia->save();
 
         return redirect()->route('noticias.index', compact('noticia'));
@@ -89,7 +89,7 @@ class Noticias extends Controller
     {
         $noticia = Noticia::find($id);
         if (isset($noticia)) {
-            return view('admin.noticias.edit', compact('noticia'));
+            return view('noticias.edit', compact('noticia'));
         }
         return view('noticias.index');
     }

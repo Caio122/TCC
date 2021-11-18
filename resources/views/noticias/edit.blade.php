@@ -7,7 +7,7 @@
     <!-- Editando Título De Notícia Já Criada -->
     <div id="editar-noticia-container" class="col-md-3 offset-md-4">
         <h1 class="text-white">Editar Notícia</h1>
-        <form action="{{ route('admin.noticias.update', $noticia->id) }}" method="POST">
+        <form action="{{ route('noticias.update', $noticia->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">

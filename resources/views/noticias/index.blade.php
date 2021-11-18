@@ -13,7 +13,7 @@
         @foreach ($noticia as $noticias)
             <div class="row">
                 <article class="card-post">
-                    <a href="{{ route('admin.noticias.show', $noticias->id) }}">
+                    <a href="{{ route('noticias.show', $noticias->id) }}">
                         <div style="float: left">
                             <img style="width: 300px; height: 200px" src="/img/noticias/{{ $noticias->image }}">
                         </div>

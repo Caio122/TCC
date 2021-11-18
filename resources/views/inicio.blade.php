@@ -9,7 +9,7 @@
     @foreach ($noticia as $noticias)
         <div class="row">
            <article class="card-post">
-               <a href="{{ route('admin.noticias.show', $noticias->id)}}">
+               <a href="{{ route('noticias.show', $noticias->id)}}">
                    <div style="float: left; background-color:rgb(0, 255, 34); width: 300px;height: 200px; border: 3px solid black;">
                    </div>
                    <h3 style="display: table-cell; float: left; width: 300px; margin-left: 15px;" class="card-title text-white"> 
@@ -26,12 +26,12 @@
             <div class="col-sm-5 mx-auto">
                  <!-- Notícias em si -->        
                      @foreach ($noticia as $noticias)
-                    <a class="image" href="{{ route('admin.noticias.show', $noticias->id)}}">
+                    <a class="image" href="{{ route('noticias.show', $noticias->id)}}">
                         <img class="card-img-top" src="/img/noticias/{{ $noticias->image}}">
                     </a>
                     <div class="card-body bg-primary">
                         <a class="card-link"
-                            href="{{ route('admin.noticias.show', $noticias->id)}}">
+                            href="{{ route('noticias.show', $noticias->id)}}">
                             <h6 class="card-subtitle mt-2 text-info">{{$noticias->titulo}}</h6>
                 
                             <h4 class="card-title text-white">{{$noticias->sbtitulo}}

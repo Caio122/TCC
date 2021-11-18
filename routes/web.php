@@ -32,13 +32,13 @@ Route::prefix('/noticias')->group( function(){
 
     Route::post('/create/store', [Noticias::class, 'store'])->name('noticias.store')->middleware('auth', 'check.is.admin');
 
-    Route::get('/show/{id}', [Noticias::class, 'show'])->name('admin.noticias.show');
+    Route::get('/show/{id}', [Noticias::class, 'show'])->name('noticias.show');
 
-    Route::get('/edit/{id}', [Noticias::class, 'edit'])->name('admin.noticias.edit')->middleware('auth', 'check.is.admin');
+    Route::get('/edit/{id}', [Noticias::class, 'edit'])->name('noticias.edit')->middleware('auth', 'check.is.admin');
 
-    Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('admin.noticias.update')->middleware('auth', 'check.is.admin');
+    Route::put('/edit/update/{id}', [Noticias::class, 'update'])->name('noticias.update')->middleware('auth', 'check.is.admin');
 
-    Route::delete('/delete/{id}', [Noticias::class, 'destroy'])->name('admin.noticias.delete')->middleware('auth', 'check.is.admin');
+    Route::delete('/delete/{id}', [Noticias::class, 'destroy'])->name('noticias.delete')->middleware('auth', 'check.is.admin');
 
 });
 
