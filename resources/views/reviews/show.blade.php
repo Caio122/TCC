@@ -21,10 +21,8 @@
             <div class="text-center">
                 <img style="height:360px; width:480px; " src="/img/reviews/{{ $review->image }}" class="img-fluid">
             </div>
-        </div>
-        <!-- Texto em si -->
-        <div class="content text-center my-5">
-            <p class="text-white">
+            <!-- Texto em si -->
+            <p  style="width: 35em; word-wrap:break-word;" class="text-white">
                 {{ $review->texto }} 
             </p>
 

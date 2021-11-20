@@ -67,8 +67,7 @@ Route::prefix('/reviews')->group( function(){
     Route::get('/', [Admin::class, 'index'])->name('home')->middleware('auth', 'check.is.admin');
     
     Route::get('/', [Admin::class, 'home'])->name('home')->middleware('auth', 'check.is.admin');
-
-
+    
   });
 
 Route::prefix('/tutoriais')->group( function(){

@@ -10,7 +10,9 @@ class Tutorial extends Model
     protected $table = 'tutorials';
     use HasFactory;
     protected $fillable = [
-        'titulo'
+        'titulo',
+        'passo',
+        'conteudo',
     ];
 
     public function user(){

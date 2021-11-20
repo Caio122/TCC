@@ -13,6 +13,18 @@
             <!-- Primeira coluna de tutoriais -->
             <div class="col-sm-5 mx-auto">
                 <!-- Tutoriais em si -->
+                @foreach ($tutorial as $tutoriais)
+                    <a class="image" href="{{ route('tutoriais.show', $tutoriais->id)}}">
+                        <img class="card-img-top" src="/img/tutoriais/{{ $tutoriais->image}}">
+                    </a>
+                    <div class="card-body bg-primary">
+                        <a class="card-link"
+                            href="{{ route('tutoriais.show', $tutoriais->id)}}">
+                            <h4 class="card-title text-white">{{$tutoriais->titulo}}</h4>
+                        </a>
+                    </div>
+                    @endforeach 
+
                 <div class="card-post mb-5">
                     <a class="image" href="/segunda">
                         <img class="card-img-top" src="img/register.jpeg" />

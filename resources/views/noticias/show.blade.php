@@ -24,8 +24,8 @@
                 </div>
             </div>
             <!-- Texto em si -->
-            <div class="content text-center my-5">
-                <p class="text-white">
+            <div class="content text-center">
+                <p style="width: 35em; word-wrap:break-word;" class="text-white">
                     {{ $noticia->texto }}
                 </p>
 

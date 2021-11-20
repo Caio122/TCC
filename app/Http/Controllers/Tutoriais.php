@@ -41,11 +41,25 @@ class Tutoriais extends Controller
     {
         $tutorial = new Tutorial();
         $tutorial->titulo = $request->input('titulo');
+        $tutorial->passo = $request->input('passo');
+        $tutorial->conteudo = $request->input('conteudo');
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+
+            $requestImage = $request->image;
+            
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")). "." . $extension;
+
+            $requestImage->move(public_path('img/tutoriais'), $imageName);
+
+            $tutorial->image = $imageName;
+        }
 
         $user= auth()->user();
-        $tutorial->user_id= $user->id;
-        
+        $tutorial->user_id= $user->id;    
         $tutorial->save();
+
         return redirect()->route('tutoriais.index', compact('tutorial'));
     }
 
@@ -88,7 +102,9 @@ class Tutoriais extends Controller
     {
         $tutorial = Tutorial::find($id);
         if (isset($tutorial)) {
-            $tutorial->titulo = $request->input('titulo'); 
+            $tutorial->titulo = $request->input('titulo');
+            $tutorial->passo = $request->input('passo');
+            $tutorial->conteudo = $request->input('conteudo');
             //caso queira adicionar mais variaveis é pra mudar depois do arrow
             $tutorial->save();
         }
@@ -103,7 +119,7 @@ class Tutoriais extends Controller
      */
     
     public function destroy(Request $request, $id) {
-        $review = Review::findOrFail($id)->delete();
+        $tutorial = Tutorial::findOrFail($id)->delete();
         return redirect()->route('tutoriais.index', compact('tutorial'));
     }
 }
