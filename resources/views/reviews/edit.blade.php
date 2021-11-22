@@ -4,12 +4,14 @@
 
 @section('content')
 
-    <!-- Editando Título De Review Já Criada -->
+    <!-- Indicação Para Editar Review -->
     <div id="editar-review-container" class="col-md-3 offset-md-4">
-        <h1 class="text-white">Editar Review</h1>
+        <h1 class="text-white">Edite Sua Review</h1>
         <form action="{{ route('reviews.update', $review->id) }}" method="POST">
             @csrf
             @method('PUT')
+            
+            <!-- Editando Título De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Review</label>
                 <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"

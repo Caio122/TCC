@@ -11,8 +11,11 @@ class Tutorial extends Model
     use HasFactory;
     protected $fillable = [
         'titulo',
-        'passo',
-        'conteudo',
+        'passou',
+        'passod',
+        'passot',
+        'passoq',
+        'passoc',
     ];
 
     public function user(){

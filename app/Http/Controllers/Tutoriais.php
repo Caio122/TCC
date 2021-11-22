@@ -41,8 +41,11 @@ class Tutoriais extends Controller
     {
         $tutorial = new Tutorial();
         $tutorial->titulo = $request->input('titulo');
-        $tutorial->passo = $request->input('passo');
-        $tutorial->conteudo = $request->input('conteudo');
+        $tutorial->passou = $request->input('passou');
+        $tutorial->passod = $request->input('passod');
+        $tutorial->passot = $request->input('passot');
+        $tutorial->passoq = $request->input('passoq');
+        $tutorial->passoc = $request->input('passoc');
         if($request->hasFile('image') && $request->file('image')->isValid()){
 
             $requestImage = $request->image;
@@ -103,8 +106,11 @@ class Tutoriais extends Controller
         $tutorial = Tutorial::find($id);
         if (isset($tutorial)) {
             $tutorial->titulo = $request->input('titulo');
-            $tutorial->passo = $request->input('passo');
-            $tutorial->conteudo = $request->input('conteudo');
+            $tutorial->passou = $request->input('passou');
+            $tutorial->passod = $request->input('passod');
+            $tutorial->passot = $request->input('passot');
+            $tutorial->passoq = $request->input('passoq');
+            $tutorial->passoc = $request->input('passoc');
             //caso queira adicionar mais variaveis é pra mudar depois do arrow
             $tutorial->save();
         }

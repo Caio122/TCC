@@ -4,47 +4,57 @@
 
 @section('content')
 
-    <!-- Adicionando Título do Tutorial -->
+    <!-- Indicação Para Editar Tutorial -->
     <div id="editar-tutorial-container" class="col-md-3 offset-md-4">
-        <h1 class="title text-white">Crie Seu Tutorial</h1>
+        <h1 class="title text-white">Edite Seu Tutorial</h1>
         <form action="{{ route('tutoriais.update', $tutorial->id) }}" method="POST">
             @csrf
             @method('PUT')
+
+            <!-- Editando Título do Tutorial -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título do Tutorial</label>
                 <textarea id="titulo" type="text" class="class form-control" maxlength="60" name="titulo"
                     placeholder="Título do Tutorial" required autocomplete="titulo" wrap="soft"></textarea>
             </div>
 
-            <!-- Adicionando Passo do Tutorial -->
+            <!-- Editando 1° Passo do Tutorial -->
             <div class="form-group">
                 <label for="Title" class="title text-info">1° Passo Do Tutorial</label>
-                <textarea id="passo" type="text" class="class form-control" maxlength="280" name="passo"
-                    placeholder="1° Passo do Tutorial" required autocomplete="passo" wrap="soft"></textarea>
+                <textarea id="passou" type="text" class="class form-control" maxlength="280" name="passou"
+                    placeholder="1° Passo do Tutorial" required autocomplete="passou" wrap="soft"></textarea>
             </div>
 
-            <!-- Adicionando Conteúdo do Tutorial -->
-            <div class="form-group">
-                <label for="Title" class="title text-info">Conteúdo do 1° Passo</label>
-                <textarea name="conteudo" id="conteudo" class="form-control" placeholder="Conteúdo do Tutorial" required
-                    autocomplete="conteudo" word wrap="break-word" ></textarea>
-            </div>
 
-            <!-- Adicionando 2° Passo do Tutorial -->
+            <!-- Editando 2° Passo do Tutorial -->
             <div class="form-group">
                 <label for="Title" class="title text-info">2° Passo Do Tutorial</label>
-                <textarea id="passo" type="text" class="class form-control" maxlength="280" name="passo"
-                    placeholder="2° Passo do Tutorial" required autocomplete="passo" wrap="soft"></textarea>
+                <textarea id="passod" type="text" class="class form-control" maxlength="280" name="passod"
+                    placeholder="2° passo do Tutorial" required autocomplete="passod" wrap="soft"></textarea>
             </div>
 
-            <!-- Adicionando Conteúdo do 2° Passo do Tutorial -->
+            <!-- Editando 3° Passo do Tutorial -->
             <div class="form-group">
-                <label for="Title" class="title text-info">Conteúdo do 2° Passo</label>
-                <textarea name="conteudo" id="conteudo" class="form-control" placeholder="Conteúdo do Tutorial" required
-                    autocomplete="conteudo" word wrap="break-word" ></textarea>
+                <label for="Title" class="title text-info">3° Passo Do Tutorial</label>
+                <textarea id="passot" type="text" class="class form-control" maxlength="280" name="passot"
+                    placeholder="3° Passo do Tutorial" required autocomplete="passot" wrap="soft"></textarea>
             </div>
-            
 
+            <!-- Editando 4° Passo do Tutorial -->
+            <div class="form-group">
+                <label for="Title" class="title text-info">4° Passo Do Tutorial</label>
+                <textarea id="passoq" type="text" class="class form-control" maxlength="280" name="passoq"
+                    placeholder="4° Passo do Tutorial" required autocomplete="passoq" wrap="soft"></textarea>
+            </div>
+
+            <!-- Editando 5° Passo do Tutorial -->
+            <div class="form-group">
+                <label for="Title" class="title text-info">5° Passo Do Tutorial</label>
+                <textarea id="passoc" type="text" class="class form-control" maxlength="280" name="passoc"
+                    placeholder="5° Passo do Tutorial" required autocomplete="passoc" wrap="soft"></textarea>
+            </div>
+
+            
             <!-- Botão Para Salvar Tutorial -->
             <input class="btn btn-info" type="submit" value="Salvar">
             

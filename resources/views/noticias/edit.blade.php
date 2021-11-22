@@ -4,12 +4,14 @@
 
 @section('content')
 
-    <!-- Editando Título De Notícia Já Criada -->
+    <!-- Indicação Para Editar Notícia -->
     <div id="editar-noticia-container" class="col-md-3 offset-md-4">
-        <h1 class="text-white">Editar Notícia</h1>
+        <h1 class="text-white">Edite Sua Notícia</h1>
         <form action="{{ route('noticias.update', $noticia->id) }}" method="POST">
             @csrf
             @method('PUT')
+
+            <!-- Editando Título De Notícia Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Notícia</label>
                 <textarea type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"

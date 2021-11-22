@@ -86,7 +86,7 @@
             <a class="navbar-brand ml-5" href="">
                 <img src="/img/donate.png" />
             </a>
-            <ul class="navbar-nav mr-auto px-5">
+            <ul class="navbar-nav mx-auto px-5">
                 <li class="nav-item">
                     <a class="nav-link text-info" href="{{ route('noticias.index') }}">Notícias</a>
                 </li>
@@ -108,7 +108,7 @@
 
         <!--Rodapé-->
         <div class="border-top border-info">
-            <div class="container  ml-1 mt-2">
+            <div class="container ml-1 mt-2">
                 <p class="text-info">
                     <img src="/img/logo-ape.png" width="30" height="35" alig="left">
                     2021-2021 Digital Monkey |
@@ -118,8 +118,7 @@
             </div>
         </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 

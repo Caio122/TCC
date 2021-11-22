@@ -4,18 +4,13 @@
 
 @section('content')
 
-    <!-- Criação De Novas Notícias -->
-    {{-- <h3 class="ml-4 text-info">Nova Notícia</h3> --}}
-
-
-    {{-- class="my-auto mr-auto form-inline" O QUE ESSA CLASS FAZ NO FORM? --}}
-
-
-    <!-- Adicionando Título da Notícia -->
+    <!-- Indicação De Nova Notícia -->
     <div id="criar-noticia-container" class="col-md-3 offset-md-4">
         <h1 class="title text-white">Crie Sua Notícia</h1>
         <form action="{{ route('noticias.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+
+            <!-- Adicionando Título da Notícia -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Notícia</label>
                 <textarea id="titulo" type="text" class="class form-control" maxlength="60" name="titulo"

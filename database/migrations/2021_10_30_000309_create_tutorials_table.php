@@ -16,8 +16,11 @@ class CreateTutorialsTable extends Migration
         Schema::create('tutorials', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('passo');
-            $table->text('conteudo');
+            $table->text('passou');
+            $table->text('passod');
+            $table->text('passot');
+            $table->text('passoq');
+            $table->text('passoc');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

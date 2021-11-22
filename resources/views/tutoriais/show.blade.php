@@ -16,10 +16,9 @@
                 <div class="text-center">
                     <img src="/img/tutoriais/{{ $tutorial->image}}" width="600" height="400">
                     <h6 class="card-title text-white">
-                        {{$tutorial->passo}}
+                        {{$tutorial->passou}}
                     </h6>
                     <h4 class="card-title text-white">
-                        {{$tutorial->conteudo}}
                     </h4>
                     <br>
                     <br>
@@ -30,10 +29,9 @@
                     <div class="text-center">
                         <img src="/img/tutoriais/{{ $tutorial->image}}" width="600" height="400">
                         <h6 class="card-title text-white">
-                            {{$tutorial->passo}}
+                            {{$tutorial->passod}}
                         </h6>
                         <h4 class="card-title text-white">
-                            {{$tutorial->conteudo}}
                         </h4>
                     </div>
                     <br>
@@ -45,10 +43,29 @@
                     <div class="text-center">
                         <img src="/img/tutoriais/{{ $tutorial->image}}" width="600" height="400">
                         <h6 class="card-title text-white">
-                            {{$tutorial->passo}}
+                            {{$tutorial->passot}}
                         </h6>
                         <h4 class="card-title text-white">
-                            {{$tutorial->conteudo}}
+                        </h4>
+                    </div>
+ 
+                    <!-- 4° Passo -->
+                    <div class="text-center">
+                        <img src="/img/tutoriais/{{ $tutorial->image}}" width="600" height="400">
+                        <h6 class="card-title text-white">
+                            {{$tutorial->passoq}}
+                        </h6>
+                        <h4 class="card-title text-white">
+                        </h4>
+                    </div>
+
+                    <!-- 5° Passo -->
+                    <div class="text-center">
+                        <img src="/img/tutoriais/{{ $tutorial->image}}" width="600" height="400">
+                        <h6 class="card-title text-white">
+                            {{$tutorial->passoc}}
+                        </h6>
+                        <h4 class="card-title text-white">
                         </h4>
                     </div>
                 </div>
