@@ -10,7 +10,7 @@
 
         <!-- Adição da Nova Review Para o Usuário -->
         @foreach ($review as $reviews)
-            <div class="row">
+            <div class="row my-3">
                 <article class="card-post">
                     <a href="{{ route('reviews.show', $reviews->id) }}">
                         <div style="float: left">
@@ -25,63 +25,5 @@
             </div>
         @endforeach
 
-        <!-- Parte De Reviews -->
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/re4.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        Minha Review Sobre Resident Evil 4
-                    </h3>
-                </a>
-            </article>
-        </div>
 
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/re4.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        Minha Review Sobre Resident Evil 4
-                    </h3>
-                </a>
-            </article>
-        </div>
-
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/re4.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        Minha Review Sobre Resident Evil 4
-                    </h3>
-                </a>
-            </article>
-        </div>
-
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/re4.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        Minha Review Sobre Resident Evil 4
-                    </h3>
-                </a>
-            </article>
-        </div>
-
-    </div>
-
-@endsection
+    @endsection

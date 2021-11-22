@@ -12,10 +12,11 @@
         <!-- Adição da Nova Notícia Para o usuário -->
         @foreach ($noticia as $noticias)
             <div class="row">
-                <article class="card-post">
+                <article class="card-post my-3">
                     <a href="{{ route('noticias.show', $noticias->id) }}">
                         <div style="float: left">
                             <img style="width: 300px; height: 200px" src="/img/noticias/{{ $noticias->image }}">
+
                         </div>
                         <h3 style="display: table-cell; float: left; width: 300px; margin-left: 15px;"
                             class="card-title text-white">
@@ -26,77 +27,5 @@
             </div>
         @endforeach
 
-        <!-- Aqui Começa a Lista Das Notícias-->
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/flash.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h3>
-                </a>
-            </article>
-        </div>
 
-
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/flash.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h3>
-                </a>
-            </article>
-        </div>
-
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/flash.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h3>
-                </a>
-            </article>
-        </div>
-
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/flash.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h3>
-                </a>
-            </article>
-        </div>
-
-        <div class="row mt-4">
-            <article class="card-post">
-                <a href="/primeira">
-                    <div style="float: left;">
-                        <img src="img/flash.jpg" height="200px" width="300px">
-                    </div>
-                    <h3 style=" display: table-cell; float: left; width: 300px; margin-left: 15px;"
-                        class="card-title text-white">
-                        The Flash: Chefe acredita que série pode ter “várias temporadas” na DC
-                    </h3>
-                </a>
-            </article>
-        </div>
-    </div>
-
-@endsection
+    @endsection

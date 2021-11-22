@@ -14,7 +14,7 @@
             <!-- Editando Título De Notícia Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Notícia</label>
-                <textarea type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"
+                <textarea type="text" class="class form-control" id="titulo"  name="titulo"
                     placeholder="Título da Notícia" value="{{ $noticia->titulo }}" required autocomplete="titulo"
                     wrap="soft"></textarea>
             </div>
@@ -22,7 +22,7 @@
             <!-- Editando Subtítulo De Notícia Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Notícia</label>
-                <textarea type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo"
+                <textarea type="text" class="class form-control" id="sbtitulo"  name="sbtitulo"
                     placeholder="Subtítulo da Notícia" value="{{ $noticia->sbtitulo }}" required autocomplete="sbtitulo"
                     wrap="soft"></textarea>
             </div>

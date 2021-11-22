@@ -49,5 +49,17 @@
             </div>
         </div>
     </div>
+    <!-- Donate -->
+    <div class="container">
+        <div class="row">
+            <div class="content text-left my-4">
+                <h1 class="title text-info">Apoie o nosso Projeto</h1>
+                <a href="">
+                    <img src="/img/donate.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+
 
 @endsection

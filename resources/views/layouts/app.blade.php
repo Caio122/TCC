@@ -44,20 +44,20 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                
+
                             @if (Auth::user()->admin)
-                            <a class="dropdown-item" href="{{ route('home')}}">
-                                {{ __('Administrativo') }}
-                            </a>
+                                <a class="dropdown-item" href="{{ route('home') }}">
+                                    {{ __('Administrativo') }}
+                                </a>
                             @else
-                            <a class="dropdown-item" href="{{ route('dashboard') }}">
-                                {{ __('Meu Perfil') }}
-                            </a>
+                                <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                    {{ __('Meu Perfil') }}
+                                </a>
                             @endif
-                            
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                                                    document.getElementById('logout-form').submit();">
+                                                                                                                                                            document.getElementById('logout-form').submit();">
                                 {{ __('Sair') }}
                             </a>
 
@@ -81,22 +81,19 @@
             </div>
         </nav>
 
-        <!-- Barra com as categorias, pesquisa e donate -->
+        <!-- Barra com as categorias e donate -->
         <nav class="navbar navbar-expand-lg bg-dark border-top border-bottom border-info">
-            <a class="navbar-brand ml-5" href="">
-                <img src="/img/donate.png" />
-            </a>
-            <ul class="navbar-nav mx-auto px-5">
-                <li class="nav-item">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item mx-2">
                     <a class="nav-link text-info" href="{{ route('noticias.index') }}">Notícias</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-2">
                     <a class="nav-link text-info" href="{{ route('reviews.index') }}">Reviews</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-2">
                     <a class="nav-link text-info" href="{{ route('tutoriais.index') }}">Tutoriais</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item mx-2">
                     <a class="nav-link text-info" href="{{ url('sobre') }}">Sobre</a>
                 </li>
             </ul>
@@ -107,7 +104,7 @@
         </main>
 
         <!--Rodapé-->
-        <div class="border-top border-info">
+        <div class="border-top border-info bg-dark">
             <div class="container ml-1 mt-2">
                 <p class="text-info">
                     <img src="/img/logo-ape.png" width="30" height="35" alig="left">

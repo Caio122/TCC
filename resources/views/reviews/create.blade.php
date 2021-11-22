@@ -13,13 +13,13 @@
             <!-- Adicionando Título da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Título Da Review</label>
-                <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo" placeholder="Título da Review" required autocomplete="titulo">
+                <input type="text" class="class form-control" id="titulo"  name="titulo" placeholder="Título da Review" required autocomplete="titulo">
             </div>
     
             <!-- Adicionando Subtítulo da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Subtítulo Da Review</label>
-                <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo" placeholder="Subtítulo da Review" required autocomplete="sbtitulo">
+                <input type="text" class="class form-control" id="sbtitulo"  name="sbtitulo" placeholder="Subtítulo da Review" required autocomplete="sbtitulo">
             </div>
     
             <!-- Adicionando Imagem da Review -->

@@ -13,14 +13,14 @@
             <!-- Adicionando Título da Notícia -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Notícia</label>
-                <textarea id="titulo" type="text" class="class form-control" maxlength="60" name="titulo"
-                    placeholder="Título da Notícia" required autocomplete="titulo" wrap="soft"></textarea>
+                <textarea id="titulo" type="text" class="class form-control" name="titulo" placeholder="Título da Notícia"
+                    required autocomplete="titulo" wrap="soft"></textarea>
             </div>
 
             <!-- Adicionando Subtítulo da Notícia -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Notícia</label>
-                <textarea id="sbtitulo" type="text" class="class form-control" maxlength="180" name="sbtitulo"
+                <textarea id="sbtitulo" type="text" class="class form-control" name="sbtitulo"
                     placeholder="Subtítulo da Notícia" required autocomplete="sbtitulo" wrap="soft"></textarea>
             </div>
 

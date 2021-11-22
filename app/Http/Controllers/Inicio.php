@@ -15,7 +15,7 @@ class Inicio extends Controller
             $noticia = Noticia::all();
             $review =  Review::all();
             $tutorial = Tutorial::all();
-         
+        
         return view('inicio', ['noticia' => $noticia, 'review' => $review, 'tutorial', $tutorial]);
     }
 
