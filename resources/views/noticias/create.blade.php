@@ -14,14 +14,14 @@
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Notícia</label>
                 <textarea id="titulo" type="text" class="class form-control" name="titulo" placeholder="Título da Notícia"
-                    required autocomplete="titulo" wrap="soft"></textarea>
+                    required autocomplete="titulo"  wrap="soft"></textarea>
             </div>
 
             <!-- Adicionando Subtítulo da Notícia -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Notícia</label>
                 <textarea id="sbtitulo" type="text" class="class form-control" name="sbtitulo"
-                    placeholder="Subtítulo da Notícia" required autocomplete="sbtitulo" wrap="soft"></textarea>
+                    placeholder="Subtítulo da Notícia" required autocomplete="sbtitulo"  wrap="soft"></textarea>
             </div>
 
             <!-- Adicionando Imagem da Notícia -->
@@ -34,7 +34,7 @@
             <div class="form-group">
                 <label for="Title" class="title text-info">Conteúdo Da Notícia</label>
                 <textarea name="texto" id="texto" class="form-control" placeholder="Conteúdo da Notícia" required
-                    autocomplete="texto" wrap="soft" cols="30" rows="12"></textarea>
+                    autocomplete="texto" wrap="soft"></textarea>
             </div>
 
             <!-- Botão Para Salvar Notícia -->

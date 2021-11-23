@@ -11,6 +11,7 @@ class Tutorial extends Model
     use HasFactory;
     protected $fillable = [
         'titulo',
+        'sbtitulo',
         'passou',
         'passod',
         'passot',

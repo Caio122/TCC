@@ -14,22 +14,22 @@
             <!-- Editando Título De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Review</label>
-                <input type="text" class="class form-control" id="titulo" maxlength="60" name="titulo"
-                    placeholder="Título da Review" value="{{ $review->titulo }}" required autocomplete="titulo">
+                <textarea class="class form-control" id="titulo"  wrap="soft"  maxlength="60" name="titulo"
+                    placeholder="Título da Review" value="{{ $review->titulo }}" required autocomplete="titulo"></textarea>
             </div>
 
             <!-- Editando subtítulo De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Review</label>
-                <input type="text" class="class form-control" id="sbtitulo" maxlength="60" name="sbtitulo"
-                    placeholder="Subtítulo da Review" value="{{ $review->sbtitulo }}" required autocomplete="sbtitulo">
+                <textarea class="class form-control" id="sbtitulo"  wrap="soft"  maxlength="60" name="sbtitulo"
+                    placeholder="Subtítulo da Review" value="{{ $review->sbtitulo }}" required autocomplete="sbtitulo"></textarea>
             </div>
 
             <!-- Editando Conteúdo De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Conteúdo Da Review</label>
-                <input type="text" name="texto" id="texto" class="form-control" placeholder="Conteúdo da Review"
-                 value="{{ $review->texto }}" required autocomplete="texto">
+                <textarea name="texto" id="texto"  wrap="soft"  class="form-control" placeholder="Conteúdo da Review"
+                 value="{{ $review->texto }}" required autocomplete="texto"></textarea>
             </div>
             <input class="btn btn-info" type="submit" value="Salvar">
         </form>
@@ -38,18 +38,5 @@
 
 
 
-
-
-    {{-- <!-- Edição De Reviews Já Criada -->
-    <h3 class="text-white">Editar Review</h3>
-
-    <form action="{{ route('admin.reviews.update', $review->id)}}" method="POST">
-        @csrf
-        @method('PUT')
-        <input type="text" name="titulo" value="{{ $review->titulo }}">
-        <input type="text" name="sbtitulo" value="{{ $review->sbtitulo }}">
-        <input type="text" name="texto" value="{{ $review->texto }}">
-        <input type="submit" value="Salvar">
-    </form> --}}
 
 @endsection

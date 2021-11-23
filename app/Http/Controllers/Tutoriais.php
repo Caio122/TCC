@@ -41,6 +41,7 @@ class Tutoriais extends Controller
     {
         $tutorial = new Tutorial();
         $tutorial->titulo = $request->input('titulo');
+        $tutorial->sbtitulo = $request->input('sbtitulo');
         $tutorial->passou = $request->input('passou');
         $tutorial->passod = $request->input('passod');
         $tutorial->passot = $request->input('passot');
@@ -106,6 +107,7 @@ class Tutoriais extends Controller
         $tutorial = Tutorial::find($id);
         if (isset($tutorial)) {
             $tutorial->titulo = $request->input('titulo');
+            $tutorial->sbtitulo = $request->input('sbtitulo');
             $tutorial->passou = $request->input('passou');
             $tutorial->passod = $request->input('passod');
             $tutorial->passot = $request->input('passot');

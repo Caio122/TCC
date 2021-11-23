@@ -13,13 +13,13 @@
             <!-- Adicionando Título da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Título Da Review</label>
-                <input type="text" class="class form-control" id="titulo"  name="titulo" placeholder="Título da Review" required autocomplete="titulo">
+                <textarea class="class form-control" id="titulo"  wrap="soft" name="titulo" placeholder="Título da Review" required autocomplete="titulo"></textarea>
             </div>
     
             <!-- Adicionando Subtítulo da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Subtítulo Da Review</label>
-                <input type="text" class="class form-control" id="sbtitulo"  name="sbtitulo" placeholder="Subtítulo da Review" required autocomplete="sbtitulo">
+                <textarea class="class form-control" id="sbtitulo"  wrap="soft" name="sbtitulo" placeholder="Subtítulo da Review" required autocomplete="sbtitulo"></textarea>
             </div>
     
             <!-- Adicionando Imagem da Review -->
@@ -31,7 +31,7 @@
             <!-- Adicionando Conteúdo da Review -->
             <div class="form-group"> 
                 <label for="Title" class="title text-info">Conteúdo Da Review</label>
-                <textarea name="texto" id="texto" class="form-control" placeholder="Conteúdo da Review" required autocomplete="texto"></textarea>
+                <textarea name="texto" id="texto"  wrap="soft" class="form-control" placeholder="Conteúdo da Review" required autocomplete="texto"></textarea>
             </div>
     
             <!-- Botão Para Salvar Review -->

@@ -18,6 +18,12 @@
                     placeholder="Título do Tutorial" required autocomplete="titulo" wrap="soft"></textarea>
             </div>
 
+            <!-- Adicionando Subtítulo do Tutorial -->
+            <div class="form-group"> 
+                <label for="Title" class="title text-info">Subtítulo Do Tutorial</label>
+                <textarea class="class form-control" id="sbtitulo"  name="sbtitulo" placeholder="Subtítulo do Tutorial" required autocomplete="sbtitulo"></textarea>
+            </div>
+
             <!-- Editando 1° Passo do Tutorial -->
             <div class="form-group">
                 <label for="Title" class="title text-info">1° Passo Do Tutorial</label>

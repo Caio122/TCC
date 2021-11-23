@@ -78,7 +78,7 @@ Route::prefix('/tutoriais')->group( function(){
 
     Route::post('/create/store', [Tutoriais::class, 'store'])->name('tutoriais.store')->middleware('auth' , 'check.is.admin');
 
-    Route::get('/show/{id}', [Tutoriais::class, 'show'])->name('tutoriais.show')->middleware('auth');
+    Route::get('/show/{id}', [Tutoriais::class, 'show'])->name('tutoriais.show');
 
     Route::get('/edit/{id}', [Tutoriais::class, 'edit'])->name('tutoriais.edit')->middleware('auth', 'check.is.admin');
 

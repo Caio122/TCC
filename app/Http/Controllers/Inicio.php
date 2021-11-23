@@ -13,10 +13,10 @@ class Inicio extends Controller
     {
 
             $noticia = Noticia::all();
-            $review =  Review::all();
+            $review =  Review::latest()->paginate(3);
             $tutorial = Tutorial::all();
         
-        return view('inicio', ['noticia' => $noticia, 'review' => $review, 'tutorial', $tutorial]);
+        return view('inicio', ['noticia' => $noticia, 'review' => $review, 'tutorial' => $tutorial]);
     }
 
 }
