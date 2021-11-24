@@ -12,7 +12,7 @@
 
             <!-- Adicionando Imagem do Tutorial -->
             <div class="form-group">
-                <label for="image" class="title text-info">Imagem Para o Tutorial:</label>
+                <label for="image" class="title text-info">Imagem Para o Tutorial (De Preferência 760x428)</label>
                 <input type="file" id="image" name="image" class="from-control-file" required autocomplete="image">
             </div>
 

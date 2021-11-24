@@ -12,10 +12,10 @@
         <!-- Adição da Nova Notícia Para o usuário -->
         @foreach ($noticia as $noticias)
             <div class="row">
-                <article class="card-post my-3">
+                <article class="card-post my-3 ">
                     <a href="{{ route('noticias.show', $noticias->id) }}">
                         <div style="float: left">
-                            <img style="width: 300px; height: 200px" src="/img/noticias/{{ $noticias->image }}">
+                            <img class="rounded" style="width: 300px; height: 200px; object-fit:cover" src="/img/noticias/{{ $noticias->image }}">
 
                         </div>
                         <h3 style="display: table-cell; float: left; width: 300px; margin-left: 15px;"

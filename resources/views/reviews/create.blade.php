@@ -24,7 +24,7 @@
     
             <!-- Adicionando Imagem da Review -->
             <div class="form-group"> 
-                <label for="image" class="title text-info">Imagem Para Review:</label>
+                <label for="image" class="title text-info">Imagem Para Review Imagem Para Notícia (De Preferência 760x428)</label>
                 <input type="file" id="image" name="image" class="from-control-file" required autocomplete="image">
             </div> 
 

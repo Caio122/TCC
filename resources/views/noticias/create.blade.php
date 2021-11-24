@@ -26,7 +26,7 @@
 
             <!-- Adicionando Imagem da Notícia -->
             <div class="form-group">
-                <label for="image" class="title text-info">Imagem Para Notícia:</label>
+                <label for="image" class="title text-info">Imagem Para Notícia (De Preferência 760x428)</label>
                 <input type="file" id="image" name="image" class="from-control-file" required autocomplete="image">
             </div>
 
@@ -41,7 +41,7 @@
             <div class="form-group">
                 <label for="Title" class="title text-info">Fonte Da Notícia:</label>
                 <textarea id="fonte" type="text" class="class form-control" name="fonte" placeholder="Nome Da Fonte"
-                    required autocomplete="fonte"  wrap="soft"></textarea>
+                    required autocomplete="fonte" wrap="soft"></textarea>
             </div>
 
             <!-- Botão Para Salvar Notícia -->

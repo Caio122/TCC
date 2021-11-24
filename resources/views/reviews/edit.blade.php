@@ -15,21 +15,24 @@
             <div class="form-group">
                 <label for="Title" class="title text-info">Título Da Review</label>
                 <textarea class="class form-control" id="titulo"  wrap="soft"  maxlength="60" name="titulo"
-                    placeholder="Título da Review" value="{{ $review->titulo }}" required autocomplete="titulo"></textarea>
+                    placeholder="Título da Review" value="{{ $review->titulo }}" 
+                    required autocomplete="titulo">{{ $review->titulo }}</textarea>
             </div>
 
             <!-- Editando subtítulo De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Subtítulo Da Review</label>
                 <textarea class="class form-control" id="sbtitulo"  wrap="soft"  maxlength="60" name="sbtitulo"
-                    placeholder="Subtítulo da Review" value="{{ $review->sbtitulo }}" required autocomplete="sbtitulo"></textarea>
+                    placeholder="Subtítulo da Review" value="{{ $review->sbtitulo }}" 
+                    required autocomplete="sbtitulo"> {{ $review->sbtitulo }}</textarea>
             </div>
 
             <!-- Editando Conteúdo De Review Já Criada -->
             <div class="form-group">
                 <label for="Title" class="title text-info">Conteúdo Da Review</label>
                 <textarea name="texto" id="texto"  wrap="soft"  class="form-control" placeholder="Conteúdo da Review"
-                 value="{{ $review->texto }}" required autocomplete="texto"></textarea>
+                 value="{{ $review->texto }}"
+                  required autocomplete="texto">{{ $review->texto }}</textarea>
             </div>
             <input class="btn btn-info" type="submit" value="Salvar">
         </form>

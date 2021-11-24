@@ -104,7 +104,7 @@
         </main>
 
         <!--Rodapé-->
-        <div class="border-top border-info bg-dark">
+        <footer class="container-fluid py-2 border-top border-info bg-dark">
             <div class="container ml-1 mt-2">
                 <p class="text-info">
                     <img src="/img/logo-ape.png" width="30" height="35" alig="left">
@@ -113,8 +113,7 @@
                     proprietários
                 </p>
             </div>
-        </div>
-    </div>
+    </footer>
 
 
 </body>

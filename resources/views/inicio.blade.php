@@ -12,7 +12,7 @@
                 <!-- Notícias em si -->
                 @foreach ($noticia as $noticias)
                     <a class="image" href="{{ route('noticias.show', $noticias->id) }}">
-                        <img class="card-img-top" src="/img/noticias/{{ $noticias->image }}">
+                        <img class="card-img-top img-fluid" src="/img/noticias/{{ $noticias->image }}">
                     </a>
                     <div class="card-body bg-primary">
                         <a class="card-link" href="{{ route('noticias.show', $noticias->id) }}">
@@ -27,7 +27,7 @@
             <div class="col-sm-5 mx-auto mw-50">
                 @foreach ($tutorial as $tutoriais)
                     <a class="image" href="{{ route('tutoriais.show', $tutoriais->id) }}">
-                        <img class="card-img-top" src="/img/tutoriais/{{ $tutoriais->image }}">
+                        <img class="card-img-top img-fluid" src="/img/tutoriais/{{ $tutoriais->image }}">
                     </a>
                     <div class="card-body bg-primary">
                         <a class="card-link" href="{{ route('tutoriais.show', $tutoriais->id) }}">
@@ -62,11 +62,10 @@
                 </div>
             @endforeach
         </div>
+    </div>
 
 
 
 
 
-
-
-    @endsection
+@endsection

@@ -18,8 +18,7 @@
                 </p>
                 <!-- Imagem do Texto -->
                 <div class="text-center">
-                    <img style="width: 480px; height: 360px" src="/img/noticias/{{ $noticia->image }}"
-                        class="img-fluid">
+                    <img class="img-fluid" src="/img/noticias/{{ $noticia->image }}">       
                 </div>
             <!-- Texto em si -->
             <div class="content my-3">
