@@ -8,7 +8,7 @@
     <div class="container-fluid mt-5">
         <div class="row">
             <!-- Primeira coluna de notícias -->
-            <div class="col-sm-5 mx-auto">
+            <div class="col-sm-5 mx-auto mw-50">
                 <!-- Notícias em si -->
                 @foreach ($noticia as $noticias)
                     <a class="image" href="{{ route('noticias.show', $noticias->id) }}">
@@ -17,17 +17,14 @@
                     <div class="card-body bg-primary">
                         <a class="card-link" href="{{ route('noticias.show', $noticias->id) }}">
                             <h6 class="card-subtitle mt-2 text-info">{{ $noticias->titulo }}</h6>
-
                             <h4 class="card-title text-white">{{ $noticias->sbtitulo }}
                             </h4>
                         </a>
                     </div>
                 @endforeach
             </div>
-            <!-- Segundo coluna de notícias -->
-            <div class="col-sm-5 mx-auto">
-
-                <!-- Tutoriais em si-->
+            <!-- Tutoriais em si-->
+            <div class="col-sm-5 mx-auto mw-50">
                 @foreach ($tutorial as $tutoriais)
                     <a class="image" href="{{ route('tutoriais.show', $tutoriais->id) }}">
                         <img class="card-img-top" src="/img/tutoriais/{{ $tutoriais->image }}">
@@ -49,21 +46,22 @@
             </h2>
         </div>
         <div class="row bg-dark">
-                @foreach ($review as $reviews)
-                    <div class="col-sm-4">
-                        <div class="card-post">
-                            <a class="image" href="{{ route('reviews.show', $reviews->id) }}">
-                                <img class="card-img-top" src="/img/reviews/{{ $reviews->image }}">
+            @foreach ($review as $reviews)
+                <div class="col-sm-4">
+                    <div class="card-post">
+                        <a class="image" href="{{ route('reviews.show', $reviews->id) }}">
+                            <img class="card-img-top" src="/img/reviews/{{ $reviews->image }}">
+                        </a>
+                        <div class="card-body bg-dark">
+                            <a class="card-link" href="{{ route('reviews.show', $reviews->id) }}">
+                                <h6 class="card-subtitle mt-2 text-info">{{ $reviews->sbtitulo }}</h6>
+                                <h4 class="card-title text-white">{{ $reviews->titulo }}</h4>
                             </a>
-                            <div class="card-body bg-dark">
-                                <a class="card-link" href="{{ route('reviews.show', $reviews->id) }}">
-                                    <h6 class="card-subtitle mt-2 text-info">{{ $reviews->sbtitulo }}</h6>
-                                    <h4 class="card-title text-white">{{ $reviews->titulo }}</h4>
-                                </a>
-                            </div>
                         </div>
                     </div>
-                @endforeach
+                </div>
+            @endforeach
+        </div>
 
 
 
