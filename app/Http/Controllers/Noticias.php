@@ -42,6 +42,7 @@ class Noticias extends Controller
         $noticia->titulo = $request->input('titulo');
         $noticia->sbtitulo = $request->input('sbtitulo');
         $noticia->texto = $request->input('texto');
+        $noticia->fonte = $request->input('fonte');
         //Adição de Imagem
         if($request->hasFile('image') && $request->file('image')->isValid()){
 
@@ -108,6 +109,7 @@ class Noticias extends Controller
             $noticia->titulo = $request->input('titulo'); 
             $noticia->sbtitulo = $request->input('sbtitulo');
             $noticia->texto = $request->input('texto');
+            $noticia->fonte = $request->input('fonte');
             //caso queira adicionar mais variaveis é pra mudar depois do arrow
             $noticia->save();
         }
@@ -126,14 +128,5 @@ class Noticias extends Controller
         return redirect()->route('noticias.index', compact('noticia'));
     }
 
-    // public function home()
-    // {
-    //     $user = auth()->user();
-
-    //     $noticia = $user->noticias;
-
-    //     return view('admin.home', ['noticia' => $noticia]);
-
-    // }
 }
 

@@ -13,6 +13,7 @@ class Noticia extends Model
         'titulo',
         'sbtitulo',
         'texto',
+        'fonte',
     ];
 
     public function user(){

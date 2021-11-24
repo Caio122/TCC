@@ -22,7 +22,7 @@
                         class="img-fluid">
                 </div>
                 <!-- Texto em si -->
-                <div class="content">
+                <div class="content my-3">
                     <p style="width: 35em; word-wrap:break-word;" class="text-white mx-auto">
                         {{ $review->texto }}
                     </p>

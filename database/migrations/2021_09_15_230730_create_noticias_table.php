@@ -18,6 +18,7 @@ class CreateNoticiasTable extends Migration
             $table->string('titulo');
             $table->string('sbtitulo');
             $table->text('texto');
+            $table->text('fonte');
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

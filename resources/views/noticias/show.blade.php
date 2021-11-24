@@ -6,6 +6,7 @@
 
     <!-- Começo do texto -->
     <p class="text-white">Coescrita Por: <b class="text-info">{{ $noticiaOwner['name'] }}</b></p>
+    <p class="text-white">Fonte Da Notícia: <b class="text-info">{{ $noticia->fonte }}</b></p>
     <div class="container text-justify" style="font-size: 22px">
         <div class="col">
             <!-- Título do Texto -->
@@ -21,7 +22,7 @@
                         class="img-fluid">
                 </div>
             <!-- Texto em si -->
-            <div class="content">
+            <div class="content my-3">
                 <p style="width: 35em; word-wrap:break-word;" class="text-white mx-auto ">
                     {{ $noticia->texto }}
                 </p>

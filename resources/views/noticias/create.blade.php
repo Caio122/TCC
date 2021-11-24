@@ -37,6 +37,13 @@
                     autocomplete="texto" wrap="soft"></textarea>
             </div>
 
+            <!-- Adicionando Fonte da Notícia -->
+            <div class="form-group">
+                <label for="Title" class="title text-info">Fonte Da Notícia:</label>
+                <textarea id="fonte" type="text" class="class form-control" name="fonte" placeholder="Nome Da Fonte"
+                    required autocomplete="fonte"  wrap="soft"></textarea>
+            </div>
+
             <!-- Botão Para Salvar Notícia -->
             <input class="btn btn-info" type="submit" value="Salvar">
         </form>
