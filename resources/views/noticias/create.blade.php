@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Indicação De Nova Notícia -->
-    <div id="criar-noticia-container" class="col-md-3 offset-md-4">
+    <div id="criar-noticia-container" class="col-md-3 offset-md-4 mx-auto">
         <h1 class="title text-white">Crie Sua Notícia</h1>
         <form action="{{ route('noticias.store') }}" method="POST" enctype="multipart/form-data">
             @csrf

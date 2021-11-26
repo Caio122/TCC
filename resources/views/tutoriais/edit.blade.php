@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Indicação Para Editar Tutorial -->
-    <div id="editar-tutorial-container" class="col-md-3 offset-md-4">
+    <div id="editar-tutorial-container" class="col-md-3 offset-md-4 mx-auto">
         <h1 class="title text-white">Edite Seu Tutorial</h1>
         <form action="{{ route('tutoriais.update', $tutorial->id) }}" method="POST">
             @csrf

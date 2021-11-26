@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Indicação Para Editar Review -->
-    <div id="editar-review-container" class="col-md-3 offset-md-4">
+    <div id="editar-review-container" class="col-md-3 offset-md-4 mx-auto">
         <h1 class="text-white">Edite Sua Review</h1>
         <form action="{{ route('reviews.update', $review->id) }}" method="POST">
             @csrf

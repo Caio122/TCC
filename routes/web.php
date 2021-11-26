@@ -88,14 +88,6 @@ Route::prefix('/tutoriais')->group( function(){
 
 });
 
-Route::get('/primeira', function() {
-    return view('noticias.primeira');
-});
-
-Route::get('/segunda', function() {
-    return view('tutoriais.segunda');
-});
-
 Route::get('/sobre', [Sobre::class, 'index'])->name('sobre');
 
 

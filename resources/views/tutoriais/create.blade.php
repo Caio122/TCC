@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Indicação Para Criar Tutorial -->
-    <div id="criar-tutorial-container" class="col-md-3 offset-md-4">
+    <div id="criar-tutorial-container" class="col-md-3 offset-md-4 mx-auto">
         <h1 class="title text-white">Crie Seu Tutorial</h1>
         <form action="{{ route('tutoriais.store') }}" method="POST" enctype="multipart/form-data">
             @csrf

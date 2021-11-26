@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Indicação Para Editar Notícia -->
-    <div id="editar-noticia-container" class="col-md-3 offset-md-4">
+    <div id="editar-noticia-container" class="col-md-3 offset-md-4 mx-auto>
         <h1 class="text-white">Edite Sua Notícia</h1>
         <form action="{{ route('noticias.update', $noticia->id) }}" method="POST">
             @csrf

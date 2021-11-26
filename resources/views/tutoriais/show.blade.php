@@ -20,7 +20,7 @@
                         <div class="text-center mt-5 mb-5">
                             <h3 class="text-info">Passo 1</h3>
                             <img src="/img/tutoriais/{{ $tutorial->image }}" width="600" height="400">
-                            <h6 class="card-title text-white">
+                            <h6 style="width: 65em; word-wrap:break-word;" class="card-title text-white">
                                 {{ $tutorial->passou }}
                             </h6>
                             <h4 class="card-title text-white">
@@ -29,7 +29,7 @@
                             <div class="text-center mt-5 mb-5">
                                 <h3 class="text-info">Passo 2</h3>
                                 <img src="/img/tutoriais/{{ $tutorial->image }}" width="600" height="400">
-                                <h6 class="card-title text-white">
+                                <h6 style="width: 65em; word-wrap:break-word;" class="card-title text-white">
                                     {{ $tutorial->passod }}
                                 </h6>
                                 <h4 class="card-title text-white">
@@ -39,7 +39,7 @@
                             <div class="text-center mt-5 mb-5">
                                 <h3 class="text-info">Passo 3</h3>
                                 <img src="/img/tutoriais/{{ $tutorial->image }}" width="600" height="400">
-                                <h6 class="card-title text-white">
+                                <h6 style="width: 65em; word-wrap:break-word;" class="card-title text-white">
                                     {{ $tutorial->passot }}
                                 </h6>
                                 <h4 class="card-title text-white">
@@ -50,7 +50,7 @@
                             <div class="text-center mt-5 mb-5">
                                 <h3 class="text-info">Passo 4</h3>
                                 <img src="/img/tutoriais/{{ $tutorial->image }}" width="600" height="400">
-                                <h6 class="card-title text-white">
+                                <h6 style="width: 65em; word-wrap:break-word;" class="card-title text-white">
                                     {{ $tutorial->passoq }}
                                 </h6>
                                 <h4 class="card-title text-white">
@@ -61,7 +61,7 @@
                             <div class="text-center mt-5 mb-5">
                                 <h3 class="text-info">Passo 5</h3>
                                 <img src="/img/tutoriais/{{ $tutorial->image }}" width="600" height="400">
-                                <h6 class="card-title text-white">
+                                <h6 style="width: 65em; word-wrap:break-word;"  class="card-title text-white">
                                     {{ $tutorial->passoc }}
                                 </h6>
                                 <h4 class="card-title text-white">

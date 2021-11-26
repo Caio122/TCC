@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Indicação De Nova Review -->
-    <div id="criar-review-container" class="col-md-3 offset-md-4">
+    <div id="criar-review-container" class="col-md-3 offset-md-4 mx-auto">
         <h1 class="title text-white">Crie Sua Review</h1>
         <form action="{{ route('reviews.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
